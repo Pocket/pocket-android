@@ -62,7 +62,7 @@ plugin-versions = { module = "com.github.ben-manes:gradle-versions-plugin", vers
 r8 = { module = "com.android.tools:r8", version = "8.7.14" }
 robolectric = { module = "org.robolectric:robolectric", version = "4.13" }
 sentry = { module = "io.sentry:sentry-android" }
-sentry-bom = { module = "io.sentry:sentry-bom", version = "7.15.0" }
+sentry-bom = { module = "io.sentry:sentry-bom", version = "7.16.0" }
 sentry-okhttp = { module = "io.sentry:sentry-okhttp" }
 snowplow-android-tracker = { module = "com.snowplowanalytics:snowplow-android-tracker", version = "6.0.6" }
 turbine = { module = "app.cash.turbine:turbine", version = "1.2.0" }
