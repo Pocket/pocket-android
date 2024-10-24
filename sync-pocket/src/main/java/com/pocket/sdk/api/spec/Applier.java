@@ -12,6 +12,7 @@ import com.pocket.sdk.api.generated.action.ClearUnleashAssignmentOverride;
 import com.pocket.sdk.api.generated.action.Delete;
 import com.pocket.sdk.api.generated.action.DeleteAlias;
 import com.pocket.sdk.api.generated.action.DeleteAnnotation;
+import com.pocket.sdk.api.generated.action.DeregisterPush;
 import com.pocket.sdk.api.generated.action.DeregisterPushV2;
 import com.pocket.sdk.api.generated.action.FakePremiumStatus;
 import com.pocket.sdk.api.generated.action.Favorite;
@@ -33,6 +34,7 @@ import com.pocket.sdk.api.generated.action.Purchase;
 import com.pocket.sdk.api.generated.action.Readd;
 import com.pocket.sdk.api.generated.action.RecentSearch;
 import com.pocket.sdk.api.generated.action.RederiveItems;
+import com.pocket.sdk.api.generated.action.RegisterPush;
 import com.pocket.sdk.api.generated.action.RegisterPushV2;
 import com.pocket.sdk.api.generated.action.RegisterSocialToken;
 import com.pocket.sdk.api.generated.action.ReportArticleView;
@@ -965,6 +967,8 @@ class Applier extends PocketApplier {
 
 
 	// Some that are not abstract because they have effects but we can ignore locally
+	@Override protected void register_push(RegisterPush action, Space space) {}
+	@Override protected void deregister_push(DeregisterPush action, Space space) {}
 	@Override protected void register_push_v2(RegisterPushV2 action, Space space) {}
 	@Override protected void deregister_push_v2(DeregisterPushV2 action, Space space) {}
 }

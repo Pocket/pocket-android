@@ -2972,6 +2972,19 @@ thing UnknownPocketMetadata.title 6
 thing UnknownPocketMetadata.url 7
 thing CorpusItem.preview 9
 thing Image.url 8
+action register_push
+action register_push.time 1
+action register_push.action 2
+action register_push.context 3
+action register_push.push_type 4
+action register_push.device_identifier 5
+action register_push.token 6
+action deregister_push
+action deregister_push.time 1
+action deregister_push.action 2
+action deregister_push.context 3
+action deregister_push.push_type 4
+action deregister_push.device_identifier 5
 
 - thing Collection.externalId
 - thing Collection.status

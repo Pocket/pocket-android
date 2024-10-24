@@ -184,7 +184,7 @@ extend type Item @figment(related_to: "SaveForLaterFeature") @figment(related_to
     "If a the domainId is a subdomain this is the primary domain id"
     origin_domain_id: String @deprecated @figment(client_api_alias: "originDomainId")
 
-    "The http resonse code of the given url"
+    "The http response code of the given url"
     response_code: String @deprecated @figment(client_api_alias: "responseCode")
 
     "TThe length in bytes of the content"
@@ -2421,11 +2421,28 @@ type UnconfirmedShare @_deprecated @figment(related_to: "SendToFriendFeature") {
 
 extend type Mutation {
     "Register this device to start receiving push notifications. Uses Firebase Messaging (previously called GCM and previously called C2DM)"
+    register_push(
+        "See {PushType} for details" push_type: PushType
+        "A unique device identifier. {guid} is ok for Android." device_identifier: String
+        "The `push token` for the device" token: String
+    ): Void
+    @figment(related_to: "PushFeature")
+    @figment(auth: "UserOptionalAuth")
+    @figment(address: "push/register")
+    @figment(effect: "When we receive a registration for a device_identifier and the same app we will invalidate the old push_token for that application.")
+}
+
+extend type Mutation {
+    """
+    Deprecated: v3-proxy (which now handles v3/send) doesn't support this action.
+    Register this device to start receiving push notifications. Uses Firebase Messaging (previously called GCM and previously called C2DM)
+    """
     register_push_v2(
         "See {PushType} for details" push_type: PushType
         "A unique device identifier. {guid} is ok for Android." device_identifier: String
         "The `push token` for the device" token: String
     ): Void
+    @deprecated
     @figment(related_to: "PushFeature")
     @figment(auth: "UserAuth")
     @figment(priority: "REMOTE")
@@ -2436,10 +2453,26 @@ extend type Mutation {
 
 extend type Mutation {
     "Stop a token previously registered with {register_push_v2}"
+    deregister_push(
+        "See {PushType} for details" push_type: PushType
+        "A unique device identifier. {guid} is ok for Android." device_identifier: String
+    ): Void
+    @figment(related_to: "PushFeature")
+    @figment(auth: "UserOptionalAuth")
+    @figment(address: "push/deregister")
+    @figment(effect: "Sets the expiration date of the token in the database to the current date.")
+}
+
+extend type Mutation {
+    """
+    Deprecated: v3-proxy (which now handles v3/send) doesn't support this action.
+    Stop a token previously registered with {register_push_v2}
+    """
     deregister_push_v2(
         "See {PushType} for details" push_type: PushType
         "A unique device identifier. {guid} is ok for Android." device_identifier: String
     ): Void
+    @deprecated
     @figment(related_to: "PushFeature")
     @figment(auth: "UserAuth")
     @figment(priority: "ASAP")

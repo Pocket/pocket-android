@@ -76,7 +76,7 @@ class PktPush(
                     val i = Interaction.on(context)
                         .merge { cxt: ActionContext.Builder -> cxt.cxt_ui(cxt_ui) }
                     pocket.syncRemote<Thing?>(
-                        null, pocket.spec().actions().register_push_v2()
+                        null, pocket.spec().actions().register_push()
                             .context(i.context)
                             .time(i.time)
                             .device_identifier(guid)
@@ -111,7 +111,7 @@ class PktPush(
         if (registeredGuid.get() != null) {
             val i = Interaction.on(context).merge { cxt: ActionContext.Builder -> cxt.cxt_ui(cxt_ui) }
             pocket.syncRemote<Thing?>(
-                null, pocket.spec().actions().deregister_push_v2()
+                null, pocket.spec().actions().deregister_push()
                     .context(i.context)
                     .time(i.time)
                     .device_identifier(registeredGuid.get())
