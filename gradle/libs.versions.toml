@@ -57,6 +57,7 @@ plugin-dagger = { module = "com.google.dagger:hilt-android-gradle-plugin", versi
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-kotlin-compose = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+plugin-licensee = { module = "app.cash.licensee:licensee-gradle-plugin", version = "1.12.0" }
 plugin-sentry = { module = "io.sentry:sentry-android-gradle-plugin", version = "4.12.0" }
 plugin-versions = { module = "com.github.ben-manes:gradle-versions-plugin", version = "0.39.0" }
 r8 = { module = "com.android.tools:r8", version = "8.7.14" }

@@ -2,6 +2,12 @@ import tasks.*
 
 plugins {
     kotlinJvm()
+    licensee()
+}
+licensee {
+    allow("Apache-2.0")
+    allowUrl("https://raw.githubusercontent.com/apollographql/apollo-kotlin/main/LICENSE") { because("self-hosted MIT") }
+    allowUrl("http://www.antlr.org/license.html") { because("self-hosted BSD-3-Clause") }
 }
 
 dependencies {

@@ -33,5 +33,8 @@ fun PluginDependenciesSpec.kotlinSerialization(): PluginDependencySpec =
 fun PluginDependenciesSpec.kotlinCompose(): PluginDependencySpec =
     id("org.jetbrains.kotlin.plugin.compose")
 
+fun PluginDependenciesSpec.licensee(): PluginDependencySpec =
+    id("app.cash.licensee")
+
 fun PluginDependenciesSpec.sentry(): PluginDependencySpec =
     id("io.sentry.android.gradle")

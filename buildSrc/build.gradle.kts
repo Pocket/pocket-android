@@ -34,6 +34,7 @@ dependencies {
     implementation(libs.plugin.kotlin)
     implementation(libs.plugin.kotlin.compose)
     implementation(libs.plugin.kotlin.serialization)
+    implementation(libs.plugin.licensee)
     implementation(libs.plugin.versions)
     implementation(libs.plugin.dagger)
     implementation(libs.plugin.androidx.navigation.safeargs)

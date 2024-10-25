@@ -1,7 +1,6 @@
 name: On Git reference created
 
-on:
-  create
+on: create
 
 jobs:
   on-release-branch-created:

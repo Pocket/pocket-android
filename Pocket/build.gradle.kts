@@ -10,6 +10,7 @@ plugins {
     safeArgsKotlin()
     kotlinSerialization()
     sentry()
+    licensee()
 }
 
 val versionMajor = 8 // Max value of 200
@@ -237,6 +238,21 @@ sentry {
     }
     includeDependenciesReport.set(false)
     ignoredBuildTypes.set(setOf(BuildTypes.DEBUG))
+}
+
+licensee {
+    allow("Apache-2.0")
+    allow("MIT")
+    allowUrl("https://jsoup.org/license") { because("self-hosted MIT") }
+    allow("BSD-2-Clause")
+    allowUrl("http://opensource.org/licenses/BSD-2-Clause")
+    allowUrl("https://github.com/braze-inc/braze-android-sdk/blob/master/LICENSE") { because("self-hosted BSD") }
+    allowUrl("https://github.com/facebook/shimmer-android/blob/master/LICENSE") { because("self-hosted BSD") }
+    allowUrl("https://raw.githubusercontent.com/ThreeTen/threetenbp/master/LICENSE.txt") { because("self-hosted BSD") }
+    allow("MPL-1.1")
+    allow("CC0-1.0")
+    allowUrl("https://developer.android.com/studio/terms.html") { because("Android SDK") }
+    allowUrl("https://developer.android.com/guide/playcore/license") { because("Play Core SDK ToS") }
 }
 
 dependencies {

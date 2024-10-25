@@ -1,0 +1,26 @@
+name: PR checks
+
+on: pull_request
+
+jobs:
+  licenses:
+    name: Validate licenses
+    runs-on: ubuntu-24.04
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+    - name: Set up JDK
+      uses: actions/setup-java@v4.4.0
+      with:
+        java-version-file: '.java-version'
+        distribution: 'temurin'
+        # Using 'temurin' speeds up the job, because this distribution is cached by the runner.
+        # See: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#Hosted-Tool-Cache
+    - name: Set up Gradle
+      uses: gradle/actions/setup-gradle@v4.1.0
+    - name: Decrypt secrets
+      env:
+        GPG_KEY: ${{ secrets.gpg_key }}
+      run: secrets/decrypt.sh
+    - name: Validate licenses
+      run: scripts/run-license-checks.sh
