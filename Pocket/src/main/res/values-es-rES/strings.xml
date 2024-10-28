@@ -227,7 +227,7 @@
 	<string name="dg_confirm_create_new_cache_m">Esto borrará tu caché de datos sin conexión y se empezará a usar el almacenamiento interno del dispositivo.</string>
 
 	<string name="dg_forced_logout_t">Por favor, inicia sesión</string>
-	<string name="dg_forced_logout_m">Tu sesión se ha cerrado desde otra ubicación. Vuelve a iniciar sesión.</string>
+	<string name="dg_forced_logout_m">Tu sesión se ha cerrado desde otra ubicación. Vuelve a intentarlo.</string>
 
 	<string name="dg_tag_too_long_m">Las etiquetas no pueden tener más de 25 caracteres.</string>
 	
@@ -436,7 +436,9 @@
 	<string name="setting_help">Obtener ayuda y soporte</string>
 	<string name="setting_twitter_label">Sigue a @Pocket en Twitter</string>
 	<string name="setting_facebook_label">Síguenos en Facebook</string>
-	<string name="setting_legal_label">Condiciones y privacidad</string>
+	<string name="setting_tos">Condiciones de servicio</string>
+	<string name="setting_privacy">Política de privacidad</string>
+	<string name="setting_oss">Licencias de código abierto</string>
 	<string name="setting_contact_us">Contacto</string>
 	<string name="setting_thank_you">Gracias por descargarla. ¡Disfrútala!</string>
 	<string name="setting_header_version">Versión</string>
@@ -477,7 +479,7 @@
 	<string name="purchase_error_activation_t">Error de activación</string>
 	<string name="purchase_error_activation_m">La compra se ha realizado correctamente, pero ha habido un problema al activar tu cuenta. Pulsa «Aceptar» para ver instrucciones sobre cómo completar la activación.</string>
 	<string name="purchase_error_purchase_t">La compra no se ha podido realizar</string>
-	<string name="purchase_error_purchase_m">Ha ocurrido un problema al realizar tu compra. Vuelve a intentarlo.</string>
+	<string name="purchase_error_purchase_m">Ha ocurrido un problema al realizar tu compra. Vuelve a intentarlo. </string>
 	<string name="purchase_error_progress">Completando la compra…</string>
 	<string name="purchase_error_already_owned_t">Ya tenías una suscripción</string>
 	<string name="purchase_error_already_owned_m">Ya tenías una suscripción a Pocket Premium.</string>
