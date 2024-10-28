@@ -211,14 +211,14 @@
 	<string name="bg_offline_cache_is_missing_m">Não foi possível localizar o cache off-line. Verifique se seu local de armazenamento off-line está conectado corretamente. Se você reorganizou ou modificou os arquivos de caches, restaure-os e tente novamente.</string>
 
 	<string name="dg_offline_cache_is_missing_permission_t">Conteúdo off-line inacessível</string>
-	<string name="dg_offline_cache_is_missing_permission_m">"O Pocket não tem mais permissão de armazenamento e não pode acessar o cache off-line. Para continuar usando um local de armazenamento externo, reative a permissão de armazenamento do Pocket ou alterne para o armazenamento interno."</string>
+	<string name="dg_offline_cache_is_missing_permission_m">"O Pocket deixou de ter permissão de armazenamento e não pode acessar o cache off-line. Para continuar usando um local de armazenamento externo, reative a permissão de armazenamento do Pocket ou alterne para o armazenamento interno."</string>
 
 	<string name="dg_offline_cache_is_missing_rw_permission_m">Desculpe, o Pocket está tendo dificuldades para acessar seu cartão SD. Registramos este problema para que nossa equipe Android possa investigar. Enquanto isso, continue usando o armazenamento interno do Pocket.</string>
 
 	<string name="dg_sdcard_confirm_change_m">Modificar os locais de armazenamento limpará seus arquivos baixados.</string>
 	
 	<string name="dg_out_of_space_t">Sem espaço para armazenamento</string>
-	<string name="dg_out_of_space_m">O local de armazenamento off-line do Pocket está sem espaço. O Pocket requer espaço livre adicional para funcionar. Para continuar, limpe um pouco de espaço. Para liberar espaço, você pode escolher limpar o cache off-line do Pocket.</string>
+	<string name="dg_out_of_space_m">O local de armazenamento off-line do Pocket está sem espaço. O Pocket requer espaço livre adicional para funcionar. Para continuar, limpe algum espaço. Para limpar espaço, pode-se limpar o cachê off-line do Pocket.</string>
 	
 	<string name="dg_after_clear_m">"Se seu dispositivo tem pouca memória, use a configuração de {name_of_storage_setting} do Pocket para limitar a quantidade de espaço que o cache pode usar."</string>
 	
@@ -235,7 +235,7 @@
 	<string name="dg_changes_not_saved_tags_m">As alterações em suas tags ainda não foram salvas. Deseja descartar as alterações ou continuar editando?</string>
 	
 	<string name="dg_market_not_found_t">A Amazon Appstore não foi encontrada</string>
-	<string name="dg_market_not_found_m">Por algum motivo inesperado, não foi possível abrir o aplicativo Amazon Appstore. Desculpe!</string>
+	<string name="dg_market_not_found_m">Por algum motivo inesperado, não foi possível abrir o aplicativo Amazon Appstore. Desculpe! </string>
 	
 	<string name="dg_browser_not_found_t">Navegador não encontrado</string>
 	<string name="dg_browser_not_found_m">Seu aparelho não possui um aplicativo de navegador disponível para abrir esta página da web.</string>
@@ -264,7 +264,7 @@
 	<string name="listen_settings_auto_play">Reproduzir artigos automaticamente</string>
 	<string name="listen_settings_auto_archive">Arquivar automaticamente após ser ouvido</string>
     
-	<string name="listen_error_timeout">Nosso servidor está demorando muito para responder. Tente novamente mais tarde.</string>
+	<string name="listen_error_timeout">Nosso servidor está demorando muito para responder. Tente novamente depois.</string>
 	<string name="listen_error_media_player">Ocorreu um erro inesperado durante a reprodução</string>
 	<string name="listen_error_server">Ocorreu um problema ao reproduzir este artigo. Tente usar outra voz.</string>
 	
@@ -374,7 +374,7 @@
 	<string name="list_empty_no_result_matched">Não houve nenhum item que correspondesse à sua pesquisa.</string>
 	
 	<string name="add_tags_list_empty_title">Use tags para se organizar</string>
-	<string name="add_tags_list_empty_body">Para encontrar seus itens, use tags na busca ou nos filtros em Salvos.\n\nPara criar uma tag, digite acima.</string>
+	<string name="add_tags_list_empty_body">Para encontrar seus itens, use tags na busca ou nos filtros em Salvos.\n\nPara criar uma tag, digite uma acima.</string>
 	
 	<!-- SETTINGS  Prefix: setting -->
 	<string name="setting_header_account">Conta</string>
@@ -436,7 +436,9 @@
 	<string name="setting_help">Obter ajuda e suporte</string>
 	<string name="setting_twitter_label">Siga o @Pocket no Twitter</string>
 	<string name="setting_facebook_label">Siga-nos no Facebook</string>
-	<string name="setting_legal_label">Termos legais e privacidade</string>
+	<string name="setting_tos">Termos de Serviço</string>
+	<string name="setting_privacy">Política de Privacidade</string>
+	<string name="setting_oss">Licenças de código-fonte aberto</string>
 	<string name="setting_contact_us">Fale conosco</string>
 	<string name="setting_thank_you">Obrigado pelo download. Divirta-se!</string>
 	<string name="setting_header_version">Versão</string>
