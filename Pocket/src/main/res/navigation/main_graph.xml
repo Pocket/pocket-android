@@ -77,6 +77,10 @@
             android:id="@+id/goToAppIconSettings"
             app:destination="@id/appIconSettings"
             />
+        <action
+            android:id="@+id/goToOpenSourceLicenses"
+            app:destination="@id/openSourceLicenses"
+            />
     </fragment>
     
     <fragment
@@ -122,5 +126,10 @@
     <fragment
         android:id="@+id/appIconSettings"
         android:name="com.pocket.app.settings.appicon.AppIconSettingsFragment"
+        />
+
+    <fragment
+        android:id="@+id/openSourceLicenses"
+        android:name="com.pocket.app.settings.OpenSourceLicensesFragment"
         />
 </navigation>

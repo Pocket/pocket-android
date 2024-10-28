@@ -13,8 +13,6 @@ import com.pocket.app.add.AddActivity
 import com.pocket.app.auth.AuthenticationActivity
 import com.pocket.app.settings.Theme
 import com.pocket.sdk.tts.ListenDeepLinkActivity
-import com.pocket.sdk.util.activity.BasicWebViewActivity
-import com.pocket.sdk.util.activity.FramedWebViewActivity
 import com.pocket.sdk2.api.legacy.PocketCache
 import com.pocket.util.android.PPActivity
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -41,8 +39,6 @@ class BrazeManager @Inject constructor(
                     AppCacheCheckActivity::class.java,
                     ListenDeepLinkActivity::class.java,
                     PPActivity::class.java,
-                    BasicWebViewActivity::class.java,
-                    FramedWebViewActivity::class.java,
                 )
             )
         )

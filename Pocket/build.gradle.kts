@@ -11,6 +11,7 @@ plugins {
     kotlinSerialization()
     sentry()
     licensee()
+    aboutLibraries()
 }
 
 val versionMajor = 8 // Max value of 200
@@ -309,6 +310,8 @@ dependencies {
     implementation(Deps.Google.JUniversalCharDet.juniversalchardet)
 
     implementation(Deps.JakeWharton.ThreeTenAbp.threeTen)
+
+    implementation(libs.aboutlibraries)
 
     implementation(libs.adjust)
     implementation(libs.braze)

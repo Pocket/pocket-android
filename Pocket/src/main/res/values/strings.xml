@@ -432,7 +432,9 @@
 	<string name="setting_help">Get help and support</string>
 	<string name="setting_twitter_label">Follow @Pocket on Twitter</string>
 	<string name="setting_facebook_label">Follow us on Facebook</string>
-	<string name="setting_legal_label">Legal &amp; Privacy</string>
+	<string name="setting_tos">Terms of Service</string>
+	<string name="setting_privacy">Privacy Policy</string>
+	<string name="setting_oss">Open source licenses</string>
 	<string name="setting_contact_us">Contact Us</string>
 	<string name="setting_thank_you">Thank you for downloading. Enjoy!</string>
 	<string name="setting_header_version">Version</string>
