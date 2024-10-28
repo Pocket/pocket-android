@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<lint>
-    <issue id="MissingDefaultResource">
-        <ignore regexp=".*splash_logo_tablet.png" />
-    </issue>
-</lint>

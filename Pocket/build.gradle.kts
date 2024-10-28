@@ -216,8 +216,8 @@ android {
     }
 
     lint {
-        abortOnError = false
         checkReleaseBuilds = false
+        checkDependencies = true
     }
     buildFeatures {
         viewBinding = true

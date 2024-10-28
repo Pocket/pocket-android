@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    >
     <string name="nm_icon" translatable="false">Pocket</string>
     <string name="nm_app" translatable="false">Pocket</string>
     <string name="alpha_settings" translatable="false">Alpha Settings</string>
@@ -31,5 +33,5 @@
     <string name="gcm_defaultSenderId" translatable="false">638773995762</string>
     <string name="google_app_id" translatable="false">1:638773995762:android:11ffc4bd95a81fa4</string>
     <string name="google_storage_bucket" translatable="false">api-project-638773995762.appspot.com</string>
-    <string name="project_id" translatable="false">api-project-638773995762</string>
+    <string name="project_id" translatable="false" tools:ignore="UnusedResources">api-project-638773995762</string>
 </resources>

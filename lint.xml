@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Turn off all checks by default, so we can opt into just the ones we want. -->
+    <issue id="all" severity="ignore" />
+    
+    <issue id="UnusedResources" severity="error" />
+</lint>

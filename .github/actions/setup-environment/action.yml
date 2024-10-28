@@ -1,0 +1,27 @@
+name: Set up environment
+description: Common environment setup steps for this repository
+
+inputs:
+  jdk:
+    description: Set up JDK
+    required: false
+    default: 'false'
+  gradle:
+    description: Set up Gradle
+    required: false
+    default: 'false'
+
+runs:
+  using: composite
+  steps:
+  - name: Set up JDK
+    if: ${{ inputs.jdk == 'true' || inputs.gradle == 'true' }}
+    uses: actions/setup-java@8df1039502a15bceb9433410b1a100fbe190c53b # v4.5.0
+    with:
+      java-version-file: '.java-version'
+      distribution: 'temurin'
+      # Using 'temurin' speeds up the job, because this distribution is cached by the runner.
+      # See: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#Hosted-Tool-Cache
+  - name: Set up Gradle
+    if: ${{ inputs.gradle == 'true' }}
+    uses: gradle/actions/setup-gradle@d156388eb19639ec20ade50009f3d199ce1e2808 # v4.1.0
