@@ -235,7 +235,7 @@
 	<string name="dg_changes_not_saved_tags_m">Les modifications à vos balises n\'ont pas encore été sauvegardées. Voulez-vous annuler les modifications ou continuer l\'édition?</string>
 	
 	<string name="dg_market_not_found_t">Amazon Appstore introuvable</string>
-	<string name="dg_market_not_found_m">Pour une raison inattendue, l\'application Amazon Appstore n\'a pu être ouverte. Nous sommes désolés!</string>
+	<string name="dg_market_not_found_m">Pour une raison inattendue, l\'application Amazon Appstore n\'a pu être ouverte. Nous sommes désolés! </string>
 	
 	<string name="dg_browser_not_found_t">Navigateur introuvable</string>
 	<string name="dg_browser_not_found_m">Votre appareil ne contient pas d\'application de navigation pour ouvrir cette page Web.</string>
