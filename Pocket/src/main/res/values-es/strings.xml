@@ -218,7 +218,7 @@
 	<string name="dg_sdcard_confirm_change_m">Cambiar la ubicación de almacenamiento eliminará tus archivos descargados.</string>
 	
 	<string name="dg_out_of_space_t">Sin espacio de almacenamiento</string>
-	<string name="dg_out_of_space_m">La ubicación de almacenamiento de datos sin conexión a Internet de Pocket se ha quedado sin espacio libre. Pocket precisa más espacio libre para seguir funcionando. Habilita un poco de espacio para continuar. Para obtener más espacio, puedes borrar la caché de datos sin conexión de Pocket.</string>
+	<string name="dg_out_of_space_m">La ubicación de almacenamiento de datos sin conexión a Internet de Pocket se ha quedado sin espacio libre. Pocket precisa más espacio libre para seguir funcionando. Habilita un poco de espacio para continuar. Para obtener más espacio, puedes borrar la caché sin conexión de Pocket.</string>
 	
 	<string name="dg_after_clear_m">"Si tu dispositivo tiene memoria limitada, usa la opción {name_of_storage_setting} de Pocket para limitar cuánto espacio puede usar el caché de Pocket."</string>
 	
@@ -436,7 +436,9 @@
 	<string name="setting_help">Obtener ayuda y soporte técnico</string>
 	<string name="setting_twitter_label">Síguenos en Twitter @Pocket</string>
 	<string name="setting_facebook_label">Síguenos en Facebook</string>
-	<string name="setting_legal_label">Aviso legal y confidencialidad </string>
+	<string name="setting_tos">Términos del Servicio</string>
+	<string name="setting_privacy">Política de privacidad</string>
+	<string name="setting_oss">Licencias de código abierto</string>
 	<string name="setting_contact_us">Contáctanos</string>
 	<string name="setting_thank_you">Gracias por descargar. ¡Disfrútalo!</string>
 	<string name="setting_header_version">Versión</string>
