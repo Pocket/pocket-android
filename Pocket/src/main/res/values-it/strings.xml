@@ -211,7 +211,7 @@
 	<string name="bg_offline_cache_is_missing_m">La cache offline non è stata trovata. Assicurati che il percorso di archiviazione offline sia adeguatamente collegato. Se hai riorganizzato o modificato i file di cache, ripristinali e riprova di nuovo.</string>
 
 	<string name="dg_offline_cache_is_missing_permission_t">Contenuto offline non accessibile</string>
-	<string name="dg_offline_cache_is_missing_permission_m">"Pocket non ha più l'autorizzazione Spazio di archiviazione e non può accedere alla cache offline. Per continuare ad utilizzare un archivio esterno, riattivare l'autorizzazione Spazio di archiviazione per Pocket oppure passare all'archivio interno."</string>
+	<string name="dg_offline_cache_is_missing_permission_m">"Pocket non ha più l'autorizzazione all'archiviazione e non può accedere alla cache offline. Per continuare ad utilizzare un archivio esterno, riattivare l'autorizzazione Spazio di archiviazione per Pocket oppure passare all'archivio interno."</string>
 
 	<string name="dg_offline_cache_is_missing_rw_permission_m">Siamo spiacenti ma Pocket ha problemi ad accedere alla scheda SD. Abbiamo inviato una segnalazione in modo che il nostro team Android possa analizzare il problema. Nel frattempo, continua a utilizzare lo spazio di archiviazione interno per Pocket.</string>
 
@@ -235,7 +235,7 @@
 	<string name="dg_changes_not_saved_tags_m">Le modifiche ai tag non sono ancora state salvate. Eliminare le modifiche o continuare a modificare?</string>
 	
 	<string name="dg_market_not_found_t">Amazon Appstore non trovato</string>
-	<string name="dg_market_not_found_m">Errore imprevisto, impossibile aprire l\'app dell\'Amazon Appstore. Ci scusiamo per l\'inconveniente.</string>
+	<string name="dg_market_not_found_m">Errore imprevisto, impossibile aprire l\'app dell\'Amazon Appstore. Ci scusiamo per l\'inconveniente!</string>
 	
 	<string name="dg_browser_not_found_t">Browser non trovato</string>
 	<string name="dg_browser_not_found_m">Il dispositivo non ha un\'applicazione browser per aprire questa pagina web.</string>
@@ -264,7 +264,7 @@
 	<string name="listen_settings_auto_play">Autoplay articoli</string>
 	<string name="listen_settings_auto_archive">Archiviazione automatica dopo l\'ascolto</string>
     
-	<string name="listen_error_timeout">Il nostro server sta impiegando troppo tempo per rispondere. Riprova più tardi.</string>
+	<string name="listen_error_timeout">Il nostro server sta impiegando troppo tempo per rispondere. Riprova più tardi</string>
 	<string name="listen_error_media_player">Si è verificato un errore di riproduzione inatteso</string>
 	<string name="listen_error_server">Si è verificato un problema di riproduzione dell\'articolo. Prova a passare a un\'altra voce.</string>
 	
@@ -436,7 +436,9 @@
 	<string name="setting_help">Ottieni assistenza e supporto</string>
 	<string name="setting_twitter_label">Segui @Pocket su Twitter</string>
 	<string name="setting_facebook_label">Seguici su Facebook</string>
-	<string name="setting_legal_label">Informazioni legali e privacy</string>
+	<string name="setting_tos">Condizioni d\'uso</string>
+	<string name="setting_privacy">Tutela della privacy</string>
+	<string name="setting_oss">Licenze open source</string>
 	<string name="setting_contact_us">Contatti</string>
 	<string name="setting_thank_you">Grazie per il download. Divertiti!</string>
 	<string name="setting_header_version">Versione</string>
