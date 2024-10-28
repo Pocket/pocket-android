@@ -218,7 +218,7 @@
 	<string name="dg_sdcard_confirm_change_m">Wenn du die Speicherorte änderst, werden deine heruntergeladenen Dateien gelöscht.</string>
 	
 	<string name="dg_out_of_space_t">Kein Speicherplatz</string>
-	<string name="dg_out_of_space_m">Der Offline-Speicherort hat keinen Speicherplatz mehr. Um einwandfrei zu funktionieren, benötigt Pocket zusätzlichen Speicherplatz. Bitte gib Speicherplatz frei, um fortzufahren. Um Speicherplatz freizugeben, kannst du zum Beispiel den Offline-Zwischenspeicher von Pocket leeren.</string>
+	<string name="dg_out_of_space_m">Der Offline-Speicherort hat keinen Speicherplatz mehr. Um einwandfrei zu funktionieren, benötigt Pocket zusätzlichen Speicherplatz. Bitte gib Speicherplatz frei, um fortzufahren. Um Platz zu machen, kannst du zum Beispiel Pockets Offline-Zwischenspeicher leeren.</string>
 	
 	<string name="dg_after_clear_m">"Wenn die Speicherkapazität deines Geräts begrenzt ist, kannst du in den {name_of_storage_setting}-Einstellungen von Pocket festlegen, wie viel Platz der Zwischenspeicher maximal einnehmen darf."</string>
 	
