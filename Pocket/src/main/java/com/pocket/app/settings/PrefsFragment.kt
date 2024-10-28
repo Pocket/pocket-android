@@ -19,7 +19,6 @@ import com.pocket.app.CustomTabs
 import com.pocket.app.SaveExtension
 import com.pocket.app.UserManager
 import com.pocket.app.auth.AuthenticationActivity
-import com.pocket.app.help.Help
 import com.pocket.app.reader.Reader
 import com.pocket.app.settings.account.AccountManagementFragment
 import com.pocket.app.settings.appicon.AppIcons
@@ -40,7 +39,6 @@ import com.pocket.sdk.offline.cache.StorageLocationPickerDialog
 import com.pocket.sdk.preferences.AppPrefs
 import com.pocket.sdk.util.AbsPocketActivity
 import com.pocket.sdk.util.DeepLinks
-import com.pocket.sdk.util.activity.FramedWebViewActivity
 import com.pocket.sdk.util.dialog.AlertMessaging
 import com.pocket.sdk.util.dialog.ProgressDialogFragment
 import com.pocket.sdk.util.file.AndroidStorageUtil
@@ -533,49 +531,56 @@ class PrefsFragment : AbsPrefsFragment() {
             newOpenUrlPref(
                 R.string.setting_help,
                 "https://help.getpocket.com/",
-                false
+            )
+        )
+
+        // Legal & Privacy
+        prefs.add(
+            newOpenUrlPref(
+                R.string.setting_tos,
+                "https://getpocket.com/en/tos/",
+            )
+        )
+        prefs.add(
+            newOpenUrlPref(
+                R.string.setting_privacy,
+                "https://getpocket.com/en/privacy/",
+            )
+        )
+        prefs.add(PreferenceViews.newActionBuilder(this, R.string.setting_oss)
+            .setOnClickListener {
+                findNavController().navigateSafely(PrefsFragmentDirections.goToOpenSourceLicenses())
+            }
+            .build())
+
+        // Contact Us
+        prefs.add(
+            newOpenUrlPref(
+                R.string.setting_contact_us,
+                "https://getpocket.com/contact-info/"
             )
         )
         prefs.add(
             newOpenUrlPref(
                 R.string.setting_twitter_label,
                 "https://twitter.com/intent/user?screen_name=Pocket",
-                false
             )
         )
         prefs.add(
             newOpenUrlPref(
                 R.string.setting_facebook_label,
                 "https://facebook.com/readitlater",
-                false
-            )
-        )
-        prefs.add(
-            newOpenUrlPref(
-                R.string.setting_legal_label,
-                "https://getpocket.com/legal?src=android",
-                true
-            )
-        )
-
-        // Contact Us
-        prefs.add(
-            newOpenUrlPref(
-                R.string.setting_contact_us,
-                "https://getpocket.com/contact-info/",
-                false
             )
         )
 
         // Version
         prefs.add(PreferenceViews.newHeader(this, R.string.setting_header_version))
 
-        val versionNumber = PreferenceViews.newActionBuilder(
-            this,
-            getString(R.string.setting_version_label, BuildConfig.VERSION_NAME)
+        prefs.add(
+            PreferenceViews.newActionBuilder(this, getString(R.string.setting_version_label, BuildConfig.VERSION_NAME))
+                .setSummaryDefaultUnchecked(R.string.setting_thank_you)
+                .build()
         )
-            .setSummaryDefaultUnchecked(R.string.setting_thank_you)
-        prefs.add(versionNumber.build())
 
         if (mode.isForInternalCompanyOnly) {
             prefs.add(
@@ -597,17 +602,9 @@ class PrefsFragment : AbsPrefsFragment() {
             .build())
     }
 
-    private fun newOpenUrlPref(label: Int, url: String, inPocket: Boolean): Preference {
+    private fun newOpenUrlPref(label: Int, url: String): Preference {
         return PreferenceViews.newActionBuilder(this, label)
-            .setOnClickListener {
-                if (inPocket) {
-                    val intent = Intent(activity, FramedWebViewActivity::class.java)
-                    intent.putExtra(FramedWebViewActivity.PATH, url)
-                    requireActivity().startActivity(intent)
-                } else {
-                    App.viewUrl(activity, url)
-                }
-            }
+            .setOnClickListener { App.viewUrl(activity, url) }
             .build()
     }
 

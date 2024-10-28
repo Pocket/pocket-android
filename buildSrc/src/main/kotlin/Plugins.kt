@@ -36,5 +36,8 @@ fun PluginDependenciesSpec.kotlinCompose(): PluginDependencySpec =
 fun PluginDependenciesSpec.licensee(): PluginDependencySpec =
     id("app.cash.licensee")
 
+fun PluginDependenciesSpec.aboutLibraries(): PluginDependencySpec =
+    id("com.mikepenz.aboutlibraries.plugin")
+
 fun PluginDependenciesSpec.sentry(): PluginDependencySpec =
     id("io.sentry.android.gradle")
