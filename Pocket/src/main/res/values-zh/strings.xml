@@ -364,7 +364,7 @@
 	<string name="list_empty_no_result_matched">没有与您的搜索匹配的项目。</string>
 	
 	<string name="add_tags_list_empty_title">使用标记进行整理</string>
-	<string name="add_tags_list_empty_body">标记便于您在“保存内容”中使用搜索或筛选条件再次找到项目。\n\n要创建标记，请在上面输入一个标记。</string>
+	<string name="add_tags_list_empty_body">标记便于您在“保存内容”中使用搜索或筛选条件再次找到项目。\n\n要创建标签，请在上面输入一个。</string>
 	
 	<!-- SETTINGS  Prefix: setting -->
 	<string name="setting_header_account">帐号</string>
