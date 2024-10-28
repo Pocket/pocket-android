@@ -364,7 +364,7 @@
 	<string name="list_empty_no_result_matched">沒有與您的搜尋相符的項目。</string>
 	
 	<string name="add_tags_list_empty_title">利用標籤進行整理</string>
-	<string name="add_tags_list_empty_body">標籤可以讓您在使用「儲存項目」的搜尋或篩選條件功能時，更輕鬆地重新查找您的項目。\n\n若要建立標籤，請在上方輸入一個標籤。</string>
+	<string name="add_tags_list_empty_body">標籤可以讓您在使用「儲存項目」的搜尋或篩選條件功能時，更輕鬆地重新查找您的項目。\n\n若要建立標籤，請在上面輸入一個。</string>
 	
 	<!-- SETTINGS  Prefix: setting -->
 	<string name="setting_header_account">帳號</string>
@@ -426,7 +426,9 @@
 	<string name="setting_help">獲取協助與支援</string>
 	<string name="setting_twitter_label">在 Twitter 上追隨 @Pocket</string>
 	<string name="setting_facebook_label">在 Facebook 上追隨我們</string>
-	<string name="setting_legal_label">法務及隱私權</string>
+	<string name="setting_tos">服務條款</string>
+	<string name="setting_privacy">隱私政策</string>
+	<string name="setting_oss">開放原始碼授權</string>
 	<string name="setting_contact_us">聯絡我們</string>
 	<string name="setting_thank_you">謝謝下載。盡情享受吧！</string>
 	<string name="setting_header_version">版本</string>
