@@ -218,7 +218,7 @@
 	<string name="dg_sdcard_confirm_change_m">Cambiar la ubicación de almacenamiento eliminará tus archivos descargados.</string>
 	
 	<string name="dg_out_of_space_t">Sin espacio de almacenamiento</string>
-	<string name="dg_out_of_space_m">La ubicación de almacenamiento de datos sin conexión a Internet de Pocket se ha quedado sin espacio libre. Pocket precisa más espacio libre para seguir funcionando. Habilita un poco de espacio para continuar. Para obtener más espacio, puedes borrar la caché de datos sin conexión de Pocket.</string>
+	<string name="dg_out_of_space_m">La ubicación de almacenamiento de datos sin conexión a Internet de Pocket se ha quedado sin espacio libre. Pocket precisa más espacio libre para seguir funcionando. Habilita un poco de espacio para continuar. Para obtener más espacio, puedes borrar la caché sin conexión de Pocket.</string>
 	
 	<string name="dg_after_clear_m">"Si tu dispositivo tiene memoria limitada, usa la opción {name_of_storage_setting} de Pocket para limitar cuánto espacio puede usar el caché de Pocket."</string>
 	
