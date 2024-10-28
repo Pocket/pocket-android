@@ -374,7 +374,7 @@
 	<string name="list_empty_no_result_matched">Aucun élément ne correspond à votre recherche.</string>
 	
 	<string name="add_tags_list_empty_title">S\'organiser avec les labels</string>
-	<string name="add_tags_list_empty_body">Grâce aux labels, vous retrouvez plus facilement vos éléments de Sauvegardes à l\'aide de la recherche ou des filtres.\n\nPour créer un label, saisissez son intitulé ci-dessus.</string>
+	<string name="add_tags_list_empty_body">Grâce aux labels, vous retrouvez plus facilement vos éléments de Sauvegardes à l\'aide de la recherche ou des filtres.\n\nPour créer un label, saisissez-en un ci-dessus.</string>
 	
 	<!-- SETTINGS  Prefix: setting -->
 	<string name="setting_header_account">Compte</string>
