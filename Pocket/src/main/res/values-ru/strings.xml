@@ -219,7 +219,7 @@
 	<string name="bg_offline_cache_is_missing_m">Офлайн-кэш не обнаружен. Убедитесь, что хранилище для офлайн-кэша подключено должным образом. Если вы переместили или изменили файлы кэша, восстановите их и попробуйте снова.</string>
 
 	<string name="dg_offline_cache_is_missing_permission_t">Офлайн материалы недоступны</string>
-	<string name="dg_offline_cache_is_missing_permission_m">"У Pocket больше нет разрешения на доступ к хранилищу, и он не может получить доступ к офлайн-кешу. Чтобы снова использовать внешнее хранилище, предоставьте Pocket разрешение на доступ к хранилищу или переключитесь на внутреннее хранилище."</string>
+	<string name="dg_offline_cache_is_missing_permission_m">"У Pocket больше нет разрешения на доступ к хранилищу, и он не может получить доступ к офлайн-кэшу. Чтобы снова использовать внешнее хранилище, предоставьте Pocket разрешение на доступ к хранилищу или переключитесь на внутреннее хранилище."</string>
 
 	<string name="dg_offline_cache_is_missing_rw_permission_m">К сожалению, у Pocket возникли проблемы с доступом к SD-карте Мы зафиксировали эту проблему, и наша команда Android будет ее изучать. В течение этого времени продолжайте использовать Pocket с внутренним хранилищем.</string>
 
@@ -456,7 +456,9 @@
 	<string name="setting_help">Получить помощь и поддержку</string>
 	<string name="setting_twitter_label">Подпишитесь на @Pocket в Twitter</string>
 	<string name="setting_facebook_label">Подпишитесь на нашу страницу в Facebook</string>
-	<string name="setting_legal_label"> Юридическая информация и конфиденциальность</string>
+	<string name="setting_tos">Условия использования</string>
+	<string name="setting_privacy">Политика конфиденциальности</string>
+	<string name="setting_oss">Лицензии с открытым кодом</string>
 	<string name="setting_contact_us">Связаться с нами</string>
 	<string name="setting_thank_you">Спасибо за скачивание. Наслаждайтесь!</string>
 	<string name="setting_header_version">Версия</string>
