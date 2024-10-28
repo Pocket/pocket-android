@@ -364,7 +364,7 @@
 	<string name="list_empty_no_result_matched">没有与您的搜索匹配的项目。</string>
 	
 	<string name="add_tags_list_empty_title">使用标记进行整理</string>
-	<string name="add_tags_list_empty_body">标记便于您在“保存内容”中使用搜索或筛选条件再次找到项目。\n\n要创建标记，请在上面输入一个标记。</string>
+	<string name="add_tags_list_empty_body">标记便于您在“保存内容”中使用搜索或筛选条件再次找到项目。\n\n要创建标签，请在上面输入一个。</string>
 	
 	<!-- SETTINGS  Prefix: setting -->
 	<string name="setting_header_account">帐号</string>
@@ -426,7 +426,9 @@
 	<string name="setting_help">获取帮助和支持</string>
 	<string name="setting_twitter_label">在 Twitter 上关注 @Pocket</string>
 	<string name="setting_facebook_label">在 Facebook 上关注我们</string>
-	<string name="setting_legal_label">法律和隐私</string>
+	<string name="setting_tos">服务条款</string>
+	<string name="setting_privacy">隐私政策</string>
+	<string name="setting_oss">开源许可证</string>
 	<string name="setting_contact_us">联系我们</string>
 	<string name="setting_thank_you">谢谢下载。尽情享受吧！</string>
 	<string name="setting_header_version">版本</string>
