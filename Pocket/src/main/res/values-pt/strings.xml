@@ -235,7 +235,7 @@
 	<string name="dg_changes_not_saved_tags_m">As alterações nas suas etiquetas ainda não foram guardadas. Quer rejeitar as alterações ou continuar a editar?</string>
 	
 	<string name="dg_market_not_found_t">Amazon Appstore não encontrada</string>
-	<string name="dg_market_not_found_m">Não foi possível abrir a aplicação Google Play por motivos inesperados. Lamentamos o sucedido!</string>
+	<string name="dg_market_not_found_m">Não foi possível abrir a aplicação Google Play por motivos inesperados. Lamentamos o sucedido! </string>
 	
 	<string name="dg_browser_not_found_t">Navegador não localizado</string>
 	<string name="dg_browser_not_found_m">O seu dispositivo não possui uma aplicação de navegador disponível para abrir esta página Web.</string>
@@ -436,7 +436,9 @@
 	<string name="setting_help">Obter ajuda e assistência</string>
 	<string name="setting_twitter_label">Seguir o @Pocket no Twitter</string>
 	<string name="setting_facebook_label">Seguir-nos no Facebook</string>
-	<string name="setting_legal_label">Legal e Privacidade</string>
+	<string name="setting_tos">Condições do Serviço</string>
+	<string name="setting_privacy">Política de privacidade</string>
+	<string name="setting_oss">Licenças de código aberto</string>
 	<string name="setting_contact_us">Contactar</string>
 	<string name="setting_thank_you">Obrigado por transferir. Divirta-se!</string>
 	<string name="setting_header_version">Versão</string>
@@ -477,7 +479,7 @@
 	<string name="purchase_error_activation_t">Erro de Activação</string>
 	<string name="purchase_error_activation_m">A compra foi realizada correctamente, mas tivemos dificuldades com a activação da sua conta. Toque em OK para obter instruções sobre como concluir a activação.</string>
 	<string name="purchase_error_purchase_t">Compra Sem Êxito</string>
-	<string name="purchase_error_purchase_m">Ocorreu um problema ao completar a sua compra. Tente de novo.</string>
+	<string name="purchase_error_purchase_m">Ocorreu um problema ao completar a sua compra. Tente de novo. </string>
 	<string name="purchase_error_progress">A concluir a sua compra...</string>
 	<string name="purchase_error_already_owned_t">A Subscrição Já Existe</string>
 	<string name="purchase_error_already_owned_m">Já possui uma subscrição do Pocket Premium.</string>

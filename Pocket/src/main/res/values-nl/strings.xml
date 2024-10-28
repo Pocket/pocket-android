@@ -218,7 +218,7 @@
 	<string name="dg_sdcard_confirm_change_m">Als je de opslaglocatie wijzigt, worden de gedownloade bestanden gewist.</string>
 	
 	<string name="dg_out_of_space_t">Geen opslagruimte meer beschikbaar</string>
-	<string name="dg_out_of_space_m">Er is geen ruimte meer in de offline opslaglocatie van Pocket. Om te werken, heeft Pocket meer vrije ruimte nodig. Maat wat ruimte vrij om verder te gaan. Om ruimte vrij te maken, kun je Pocket\'s offline cache wissen.</string>
+	<string name="dg_out_of_space_m">Er is geen ruimte meer in de offline opslaglocatie van Pocket. Om te werken, heeft Pocket meer vrije ruimte nodig. Maat wat ruimte vrij om verder te gaan. Om ruimte vrij te maken, kan je Pocket\'s offline cache wissen.</string>
 	
 	<string name="dg_after_clear_m">"Als het apparaat over beperkte ruimte beschikt, kun je gebruikmaken van de instelling {name_of_storage_setting} van Pocket om te beperken hoeveel ruimte de cache mag gebruiken."</string>
 	
@@ -235,7 +235,7 @@
 	<string name="dg_changes_not_saved_tags_m">De wijzigingen aan jouw tags zijn nog niet opgeslagen Wil je de wijzigingen negeren of doorgaan met bewerken?</string>
 	
 	<string name="dg_market_not_found_t">Amazon Appstore niet gevonden</string>
-	<string name="dg_market_not_found_m">De Amazon Appstore-app kon om een onverwachte reden niet worden geopend. Onze excuses!</string>
+	<string name="dg_market_not_found_m">De Amazon Appstore-app kon om een onverwachte reden niet worden geopend. Het spijt ons! </string>
 	
 	<string name="dg_browser_not_found_t">Browser niet gevonden</string>
 	<string name="dg_browser_not_found_m">Jouw apparaat heeft geen browser app beschikbaar om deze webpagina te openen.</string>
@@ -436,7 +436,9 @@
 	<string name="setting_help">Hulp en ondersteuning</string>
 	<string name="setting_twitter_label">Volg @Pocket op Twitter</string>
 	<string name="setting_facebook_label">Volg ons op Facebook</string>
-	<string name="setting_legal_label">Juridische informatie en privacy</string>
+	<string name="setting_tos">Gebruiksvoorwaarden</string>
+	<string name="setting_privacy">Privacybeleid</string>
+	<string name="setting_oss">Open source-licenties</string>
 	<string name="setting_contact_us">Neem contact met ons op</string>
 	<string name="setting_thank_you">Bedankt voor het downloaden. Veel plezier!</string>
 	<string name="setting_header_version">Versie</string>

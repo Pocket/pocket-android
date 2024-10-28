@@ -235,7 +235,7 @@
 	<string name="dg_changes_not_saved_tags_m">Les modifications à vos balises n\'ont pas encore été sauvegardées. Voulez-vous annuler les modifications ou continuer l\'édition?</string>
 	
 	<string name="dg_market_not_found_t">Amazon Appstore introuvable</string>
-	<string name="dg_market_not_found_m">Pour une raison inattendue, l\'application Amazon Appstore n\'a pu être ouverte. Nous sommes désolés!</string>
+	<string name="dg_market_not_found_m">Pour une raison inattendue, l\'application Amazon Appstore n\'a pu être ouverte. Nous sommes désolés! </string>
 	
 	<string name="dg_browser_not_found_t">Navigateur introuvable</string>
 	<string name="dg_browser_not_found_m">Votre appareil ne contient pas d\'application de navigation pour ouvrir cette page Web.</string>
@@ -436,7 +436,9 @@
 	<string name="setting_help">Obtenir de l\'aide et du soutien</string>
 	<string name="setting_twitter_label">Suivez @Pocket sur Twitter</string>
 	<string name="setting_facebook_label">Suivez-nous sur Facebook</string>
-	<string name="setting_legal_label">Avis juridique et Confidentialité</string>
+	<string name="setting_tos">Conditions générales d\'utilisation</string>
+	<string name="setting_privacy">Politique de confidentialité</string>
+	<string name="setting_oss">Licences Open Source</string>
 	<string name="setting_contact_us">Contactez-nous</string>
 	<string name="setting_thank_you">Merci d\'avoir téléchargé. Amusez-vous bien!</string>
 	<string name="setting_header_version">Version</string>

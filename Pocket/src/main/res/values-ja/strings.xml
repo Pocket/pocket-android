@@ -426,7 +426,9 @@
 	<string name="setting_help">サポートに問い合わせる</string>
 	<string name="setting_twitter_label">Twitter で @Pocket をフォロー</string>
 	<string name="setting_facebook_label">Facebook でフォロー</string>
-	<string name="setting_legal_label">法関連＆プライバシー</string>
+	<string name="setting_tos">サービス利用規約</string>
+	<string name="setting_privacy">プライバシーポリシー</string>
+	<string name="setting_oss">オープンソースライセンス</string>
 	<string name="setting_contact_us">お問い合わせ</string>
 	<string name="setting_thank_you">ダウンロードしていただき、ありがとうございます。お楽しみください！</string>
 	<string name="setting_header_version">バージョン</string>

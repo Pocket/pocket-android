@@ -374,7 +374,7 @@
 	<string name="list_empty_no_result_matched">Aucun élément ne correspond à votre recherche.</string>
 	
 	<string name="add_tags_list_empty_title">S\'organiser avec les labels</string>
-	<string name="add_tags_list_empty_body">Grâce aux labels, vous retrouvez plus facilement vos éléments de Sauvegardes à l\'aide de la recherche ou des filtres.\n\nPour créer un label, saisissez son intitulé ci-dessus.</string>
+	<string name="add_tags_list_empty_body">Grâce aux labels, vous retrouvez plus facilement vos éléments de Sauvegardes à l\'aide de la recherche ou des filtres.\n\nPour créer un label, saisissez-en un ci-dessus.</string>
 	
 	<!-- SETTINGS  Prefix: setting -->
 	<string name="setting_header_account">Compte</string>
@@ -436,7 +436,9 @@
 	<string name="setting_help">Obtenir de l\'aide et une assistance technique</string>
 	<string name="setting_twitter_label">Suivez @Pocket sur Twitter.</string>
 	<string name="setting_facebook_label">Suivez-nous sur Facebook.</string>
-	<string name="setting_legal_label">Mentions légales et vie privée</string>
+	<string name="setting_tos">Conditions générales d\'utilisation</string>
+	<string name="setting_privacy">Politique de confidentialité</string>
+	<string name="setting_oss">Licences open source</string>
 	<string name="setting_contact_us">Nous contacter</string>
 	<string name="setting_thank_you">Merci pour votre téléchargement. Bonne utilisation !</string>
 	<string name="setting_header_version">Version</string>

@@ -226,7 +226,7 @@
 	<string name="dg_sdcard_confirm_change_m">Zmiana lokalizacji przechowywania spowoduje usunięcie pobranych plików.</string>
 	
 	<string name="dg_out_of_space_t">Brak przestrzeni dyskowej</string>
-	<string name="dg_out_of_space_m">Brak miejsca w lokalizacji przechowywania w trybie offline aplikacji Pocket. Aplikacja Pocket musi mieć więcej wolnego miejsca, aby poprawnie działać. Zwolnij miejsce, aby kontynuować. Zwolnienie miejsca może wymagać wyczyszczenia pamięci podręcznej trybu offline aplikacji Pocket.</string>
+	<string name="dg_out_of_space_m">Brak miejsca w lokalizacji przechowywania w trybie offline aplikacji Pocket. Aplikacja Pocket musi mieć więcej wolnego miejsca, aby poprawnie działać. Zwolnij trochę pamięci, aby kontynuować. Zwolnienie miejsca może wymagać wyczyszczenia pamięci podręcznej trybu offline aplikacji Pocket.</string>
 	
 	<string name="dg_after_clear_m">"Jeśli Twoje urządzenie ma ograniczoną pamięć, użyj Ustawień {name_of_storage_setting} aplikacji Pocket, aby określić limit miejsca do wykorzystania przez pamięć podręczną."</string>
 	
@@ -456,7 +456,9 @@
 	<string name="setting_help">Uzyskaj pomoc i wsparcie</string>
 	<string name="setting_twitter_label">Obserwuj @Pocket na Twitterze</string>
 	<string name="setting_facebook_label">Śledź nas w serwisie Facebook</string>
-	<string name="setting_legal_label">Oświadczenia prawne i prywatność</string>
+	<string name="setting_tos">Warunki użytkowania usługi</string>
+	<string name="setting_privacy">Zasady ochrony prywatności</string>
+	<string name="setting_oss">Licencje open source</string>
 	<string name="setting_contact_us">Kontakt</string>
 	<string name="setting_thank_you">Dziękujemy za pobranie. Baw się dobrze!</string>
 	<string name="setting_header_version">Wersja</string>
