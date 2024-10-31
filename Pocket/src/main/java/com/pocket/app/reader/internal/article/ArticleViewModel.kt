@@ -329,6 +329,11 @@ class ArticleViewModel @Inject constructor(
             }
         }
 
+        override fun onAiClicked() {
+            super.onAiClicked()
+            _events.tryEmit(ArticleScreen.Event.GoToAi)
+        }
+
         override fun onViewOriginalClicked() {
             super.onViewOriginalClicked()
             _events.tryEmit(ArticleScreen.Event.GoToOriginalWebView)
@@ -444,6 +449,7 @@ class ArticleViewModel @Inject constructor(
     ) = ReaderToolbar.ToolbarUiState(
         toolbarVisible = true,
         upVisible = true,
+        aiButtonVisible = true,
         actionButtonState = actionButtonState,
         listenVisible = true,
         shareVisible = true,
@@ -453,6 +459,7 @@ class ArticleViewModel @Inject constructor(
     private fun UnsavedSyndicatedArticleToolbarState() = ReaderToolbar.ToolbarUiState(
         toolbarVisible = true,
         upVisible = true,
+        aiButtonVisible = true,
         actionButtonState = ReaderToolbar.ActionButtonState.Save(),
         listenVisible = true,
         shareVisible = true,

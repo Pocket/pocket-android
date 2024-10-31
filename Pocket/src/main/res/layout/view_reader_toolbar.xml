@@ -35,7 +35,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:visibility="@{toolbarUiStateHolder.toolbarUiState.upVisible}"
         />
-    
+
+    <com.pocket.ui.view.button.IconButton
+        android:id="@+id/aiButton"
+        style="@style/Pkt_IconButton_Premium"
+        android:layout_height="0dp"
+        android:onClick="@{() -> toolbarInteractions.onAiClicked()}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/actionButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:visibility="@{toolbarUiStateHolder.toolbarUiState.aiButtonVisible}"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/actionButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="archiveButton,ReAddButton,saveButton"
+        />
+
     <com.pocket.ui.view.button.IconButton
         android:id="@+id/archiveButton"
         style="@style/Pkt_IconButton_Archive"

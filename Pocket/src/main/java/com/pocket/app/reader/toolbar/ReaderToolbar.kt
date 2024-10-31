@@ -31,6 +31,7 @@ object ReaderToolbar {
 
     interface ToolbarInteractions {
         fun onUpClicked()
+        fun onAiClicked()
         fun onSaveClicked()
         fun onArchiveClicked()
         fun onReAddClicked()
@@ -60,6 +61,7 @@ object ReaderToolbar {
     data class ToolbarUiState(
         val toolbarVisible: Boolean = false,
         val upVisible: Boolean = false,
+        val aiButtonVisible: Boolean = false,
         val actionButtonState: ActionButtonState = ActionButtonState.None,
         val listenVisible: Boolean = false,
         val shareVisible: Boolean = false,

@@ -193,6 +193,9 @@ class ArticleFragment : AbsPocketFragment(), Reader.NavigationEventHandler, NoOb
             is ArticleScreen.Event.GoBack -> readerFragment?.onBackPressed()
             is ArticleScreen.Event.GoToOriginalWebView ->
                 navController?.navigateSafely(ArticleFragmentDirections.switchToOriginalWeb(args.url))
+            is ArticleScreen.Event.GoToAi -> {
+                navController?.navigateSafely(ArticleFragmentDirections.switchToAi(args.url))
+            }
             is ArticleScreen.Event.GoToSignIn -> {
                 AuthenticationActivity.startActivity(requireContext(), true)
             }

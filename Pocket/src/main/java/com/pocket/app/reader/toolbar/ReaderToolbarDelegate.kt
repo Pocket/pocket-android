@@ -45,6 +45,9 @@ open class ReaderToolbarDelegate(
         _toolbarEvents.tryEmit(ReaderToolbar.ToolbarEvent.GoBack)
     }
 
+    override fun onAiClicked() {
+    }
+
     override fun onSaveClicked() {
         tracker.track(ReaderToolbarEvents.saveClicked(url))
         coroutineScope.launch {

@@ -9,7 +9,7 @@ allprojects {
             filter {
                 includeGroupByRegex("^androidx\\..*")
                 includeGroupByRegex("^com\\.android\\..*")
-                includeGroupByRegex("^com\\.google\\.(android\\.|firebase|testing\\.platform).*")
+                includeGroupByRegex("^com\\.google\\.(android\\.|firebase|testing\\.platform|ai).*")
             }
         }
         mavenCentral()

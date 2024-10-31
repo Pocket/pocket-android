@@ -72,6 +72,10 @@
             android:id="@+id/enterOriginalWeb"
             app:destination="@id/originalWeb"/>
     
+        <action
+            android:id="@+id/switchToAi"
+            app:destination="@+id/ai"
+            />
     </fragment>
     
     <fragment
@@ -155,4 +159,10 @@
     
     </fragment>
 
+    <fragment
+        android:id="@+id/ai"
+        android:name="com.pocket.app.reader.internal.article.AiFragment"
+        >
+        <argument android:name="url" app:argType="string"/>
+    </fragment>
 </navigation>

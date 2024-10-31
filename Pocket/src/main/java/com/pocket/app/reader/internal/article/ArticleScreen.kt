@@ -58,6 +58,7 @@ class ArticleScreen {
     sealed class Event {
         data object GoBack : Event()
         data object GoToOriginalWebView : Event()
+        data object GoToAi : Event()
         data object GoToSignIn : Event()
         data object ShowHighlightsUpsell : Event()
         data object ShowHighlightBottomSheet : Event()

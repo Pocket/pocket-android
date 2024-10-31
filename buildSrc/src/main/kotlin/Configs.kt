@@ -11,7 +11,7 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinProjectExtension
 
 object AndroidConfigs {
     const val CompileSdkVersion = 34
-    const val MinSdkVersion = 23
+    const val MinSdkVersion = 31
     const val TargetSdkVersion = 34
 }
 

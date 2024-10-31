@@ -288,6 +288,7 @@ dependencies {
     implementation(Deps.Google.GMS.Plus.plus)
     implementation(libs.google.play.billing)
     implementation(Deps.Android.InstallReferrer.installReferrer)
+    implementation(libs.aicore)
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.messaging)
