@@ -19,5 +19,28 @@
       "matchDepNames": ["plugin-*"],
       "semanticCommitType": "chore"
     }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["gradle/libs.versions.toml"],
+      "matchStrings": ["(?<depName>.*?) = { module = \"com.android.tools:r8\", version = \"(?<currentValue>.*?)\" }\\n"],
+      "versioningTemplate": "maven",
+      "datasourceTemplate": "custom.r8"
+    }
+  ],
+  "customDatasources": {
+    "r8": {
+      "defaultRegistryUrlTemplate": "https://r8.googlesource.com/r8/+log/refs/heads/8.7/src/main/java/com/android/tools/r8/Version.java",
+      "transformTemplates": [
+        "{\n    \"releases\": log[$match(message, /^Version (\\d+\\.\\d+\\.\\d+)\\n/)].\n        {\n            \"version\": $match(message, /^Version (\\d+\\.\\d+\\.\\d+)\\n/)[0].groups[0]\n        }\n}\n"
+      ]
+    }
+  },
+  "logLevelRemap": [
+    {
+      "matchMessage": "/^Custom manager fetcher/",
+      "newLogLevel": "info"
+    }
   ]
 }
