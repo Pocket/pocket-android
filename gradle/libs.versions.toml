@@ -8,6 +8,7 @@ dagger = "2.53"
 kotlin = "2.1.0"
 okhttp = "4.12.0"
 okio = "3.9.1"
+prosemirror = "1.1.5"
 
 [libraries]
 aboutlibraries = { module = "com.mikepenz:aboutlibraries-compose-m3", version.ref = "aboutlibraries" }
@@ -63,6 +64,9 @@ plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serializat
 plugin-licensee = { module = "app.cash.licensee:licensee-gradle-plugin", version = "1.12.0" }
 plugin-sentry = { module = "io.sentry:sentry-android-gradle-plugin", version = "4.14.1" }
 plugin-versions = { module = "com.github.ben-manes:gradle-versions-plugin", version = "0.51.0" }
+prosemirror-model = { module = "com.atlassian.prosemirror:model", version.ref = "prosemirror"}
+prosemirror-state = { module = "com.atlassian.prosemirror:state", version.ref = "prosemirror"}
+prosemirror-transform = { module = "com.atlassian.prosemirror:transform", version.ref = "prosemirror"}
 r8 = { module = "com.android.tools:r8", version = "8.7.23" }
 robolectric = { module = "org.robolectric:robolectric", version = "4.14.1" }
 sentry = { module = "io.sentry:sentry-android" }
