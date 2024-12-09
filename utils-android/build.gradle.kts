@@ -5,7 +5,7 @@ android {
     namespace = "com.pocket.utils.android"
 }
 dependencies {
-    api(project(Deps.Pocket.utils))
+    api(projects.utils)
     api(platform(libs.kotlinx.coroutines.bom))
     api(libs.kotlinx.coroutines.android)
     api(Deps.Google.Material.material)

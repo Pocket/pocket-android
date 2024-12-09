@@ -15,7 +15,7 @@ plugins {
 }
 
 val versionMajor = 8 // Max value of 200
-val versionMinor = 29 // Max of two digits
+val versionMinor = 30 // Max of two digits
 val versionPatch = 0 // Max of two digits
 val versionBuild = 0 // Max of three digits
 
@@ -257,9 +257,9 @@ licensee {
 }
 
 dependencies {
-    implementation(project(Deps.Pocket.syncPocketAndroid))
-    implementation(project(Deps.Pocket.analytics))
-    implementation(project(Deps.Pocket.pocketUi))
+    implementation(projects.syncPocketAndroid)
+    implementation(projects.analytics)
+    implementation(projects.pocketUi)
 
     implementation(libs.androidx.activity)
     implementation(libs.androidx.activity.compose)

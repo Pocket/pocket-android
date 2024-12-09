@@ -1,7 +1,5 @@
 package com.pocket.sdk.util.data;
 
-import androidx.recyclerview.widget.DiffUtil;
-
 import com.ideashower.readitlater.BuildConfig;
 
 import java.util.ArrayList;
@@ -17,7 +15,7 @@ import java.util.Set;
  */
 public abstract class AbsDataSourceCache<T> implements DataSourceCache<T> {
 
-    private static boolean STRICT_MODE = BuildConfig.DEBUG && true; // TODO turn off after some testing or always leave on for dev?
+    private static final boolean STRICT_MODE = BuildConfig.DEBUG;
 
     private final List<T> mList = new ArrayList<>();
     private final Set<Listener> mListeners = new HashSet<>();
@@ -26,14 +24,11 @@ public abstract class AbsDataSourceCache<T> implements DataSourceCache<T> {
     private LoadState mLoadState = LoadState.INITIAL;
     private Error mError;
     private boolean mIsPagingComplete;
-    private int mResetCounter;
     private boolean mIsRefreshPending;
-    private FastOrDieDiffer<T> mDiffer;
-    
+
     public AbsDataSourceCache() {}
 
     private void checkThread() {
-        // TODO could also consider just always checking, but for starters just making it so you can turn this check on and off
         if (STRICT_MODE && Thread.currentThread() != mCreatedOnThread) throw new RuntimeException("methods should only be invoked from the ui thread (or the thread the created this cache). This was created on thread: " + mCreatedOnThread);
     }
 
@@ -165,33 +160,8 @@ public abstract class AbsDataSourceCache<T> implements DataSourceCache<T> {
         mListeners.add(listener);
     }
 
-    @Override
-    public void removeListener(Listener listener) {
-        checkThread();
-        mListeners.remove(listener);
-    }
-
     public void clearListeners() {
         mListeners.clear();
-    }
-
-    @Override
-    public void reset() {
-        checkThread();
-        mListeners.clear();
-        resetData();
-        if (mDiffer != null) mDiffer.reset();
-    }
-
-    @Override
-    public void resetData() {
-        checkThread();
-        mList.clear();
-        mLoadState = LoadState.INITIAL;
-        mIsPagingComplete = false;
-        mError = null;
-        mIsRefreshPending = false;
-        mResetCounter++;
     }
 
     protected void setState(LoadState state) {
@@ -225,16 +195,12 @@ public abstract class AbsDataSourceCache<T> implements DataSourceCache<T> {
     
     protected void setList(List<T> list, boolean isPagingComplete) {
         checkThread();
-        DiffUtil.DiffResult diff = null;
-        if (mDiffer != null) {
-            diff = mDiffer.calculate(mList, list);
-        }
         mList.clear();
         mList.addAll(list);
         mIsPagingComplete = isPagingComplete;
         setState(LoadState.LOADED);
         for (Listener listener : mListeners) {
-            listener.onDataSourceChanged(diff);
+            listener.onDataSourceChanged();
         }
     }
 
@@ -253,10 +219,4 @@ public abstract class AbsDataSourceCache<T> implements DataSourceCache<T> {
                 return false;
         }
     }
-    
-    public void setDiffer(FastOrDieDiffer<T> differ) {
-        checkThread();
-        mDiffer = differ;
-    }
-    
 }

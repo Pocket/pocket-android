@@ -5,20 +5,6 @@
  */
 @Suppress("MemberNameEqualsClassName")
 object Deps {
-    object Pocket {
-        const val analytics = ":analytics"
-        const val pocketUi = ":pocket-ui"
-        const val projectTools = ":project-tools"
-        const val syncAndroid = ":sync-android"
-        const val sync = ":sync"
-        const val syncParser = ":sync-parser"
-        const val syncGen = ":sync-gen"
-        const val syncPocketAndroid = ":sync-pocket-android"
-        const val syncPocket = ":sync-pocket"
-        const val utilsAndroid = ":utils-android"
-        const val utils = ":utils"
-    }
-
     object Jetbrains {
         object Kotlin {
             const val jUnit = "org.jetbrains.kotlin:kotlin-test-junit"

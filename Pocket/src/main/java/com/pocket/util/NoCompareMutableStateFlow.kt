@@ -1,17 +1,21 @@
 package com.pocket.util
 
-import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.SharedFlow
+
+interface NoCompareStateFlow<T> : SharedFlow<T> {
+    val value: T
+}
 
 /**
- * A [MutableStateFlow] that will always emit a set value, even if the new value equals the old one.
+ * Like a [MutableStateFlow], but will always emit a set value, even if the new value equals the old one.
  */
 class NoCompareMutableStateFlow<T>(
     value: T
-) : MutableStateFlow<T> {
+) : NoCompareStateFlow<T> {
 
     override var value: T = value
         set(value) {
@@ -19,24 +23,29 @@ class NoCompareMutableStateFlow<T>(
             innerFlow.tryEmit(value)
         }
 
-    private val innerFlow = MutableSharedFlow<T>(replay = 1)
+    private val innerFlow = MutableSharedFlow<T>(
+        replay = 1,
+        onBufferOverflow = BufferOverflow.DROP_OLDEST,
+    )
 
-    override fun compareAndSet(expect: T, update: T): Boolean {
-        value = update
-        return true
+    init {
+        innerFlow.tryEmit(value)
     }
 
-    override suspend fun emit(value: T) {
-        this.value = value
-    }
-
-    override fun tryEmit(value: T): Boolean {
-        this.value = value
-        return true
-    }
-
-    override val subscriptionCount: StateFlow<Int> = innerFlow.subscriptionCount
-    @ExperimentalCoroutinesApi override fun resetReplayCache() = innerFlow.resetReplayCache()
     override suspend fun collect(collector: FlowCollector<T>): Nothing = innerFlow.collect(collector)
     override val replayCache: List<T> = innerFlow.replayCache
+}
+
+/**
+ * Updates the [NoCompareMutableStateFlow.value] atomically using the specified [function] of its value.
+ *
+ * [function] may be evaluated multiple times, if [NoCompareMutableStateFlow.value] is being concurrently updated.
+ */
+// Note:
+// This is trivial, because it replaced a trivial [NoCompareMutableStateFlow].compareAndSet
+// implementation and is kept just for compatibility with [MutableStateFlow] API.
+// But this means this implementation doesn't have the same safety and guarantees when
+// updating concurrently from multiple threads.
+inline fun <T> NoCompareMutableStateFlow<T>.update(function: (T) -> T) {
+    value = function(value)
 }

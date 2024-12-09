@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    api(project(Deps.Pocket.utils))
+    api(projects.utils)
 
     api(Deps.Google.Guava.guava)
     api(libs.okio)

@@ -5,8 +5,8 @@ android {
     namespace = "com.pocket.sync.android"
 }
 dependencies {
-    api(project(Deps.Pocket.sync))
-    api(project(Deps.Pocket.utilsAndroid))
+    api(projects.sync)
+    api(projects.utilsAndroid)
 
     api(Deps.Google.Tink.tink)
     

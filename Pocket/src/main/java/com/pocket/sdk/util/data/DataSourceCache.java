@@ -1,7 +1,5 @@
 package com.pocket.sdk.util.data;
 
-import androidx.recyclerview.widget.DiffUtil;
-
 import java.util.List;
 
 /**
@@ -70,7 +68,7 @@ public interface DataSourceCache<T> {
      * <p>
      * {@link LoadState#INITIAL_LOADING} will be immediately after this.
      * {@link LoadState#INITIAL_ERROR} will be in the future on failure.
-     * {@link LoadState#LOADED} will be in the future on success. Along with {@link Listener#onDataSourceChanged(DiffUtil.DiffResult)}.
+     * {@link LoadState#LOADED} will be in the future on success. Along with {@link Listener#onDataSourceChanged()}.
      */
     void loadFirstPage();
 
@@ -85,7 +83,7 @@ public interface DataSourceCache<T> {
      * <p>
      * {@link LoadState#LOADED_APPENDING} will be immediately after this.
      * {@link LoadState#LOADED_APPEND_ERROR} will be in the future on failure.
-     * {@link LoadState#LOADED} will be in the future on success. Along with {@link Listener#onDataSourceChanged(DiffUtil.DiffResult)}.
+     * {@link LoadState#LOADED} will be in the future on success. Along with {@link Listener#onDataSourceChanged()}.
      *
      */
     void loadNextPage();
@@ -100,7 +98,7 @@ public interface DataSourceCache<T> {
      * <p>
      * {@link LoadState#LOADED_REFRESHING} will be immediately after this.
      * {@link LoadState#LOADED_REFRESH_ERROR} will be in the future on failure.
-     * {@link LoadState#LOADED} will be in the future on success. Along with {@link Listener#onDataSourceChanged(DiffUtil.DiffResult)}.
+     * {@link LoadState#LOADED} will be in the future on success. Along with {@link Listener#onDataSourceChanged()}.
      *
      */
     void refresh();
@@ -144,26 +142,11 @@ public interface DataSourceCache<T> {
      */
     void addListener(Listener listener);
 
-    void removeListener(Listener listener);
-
-    /**
-     * Clear the cache, reset back to the initial state, including disconnecting from listeners.
-     */
-    void reset();
-
-	/**
-     * Same as {@link #reset()} but keeps listeners. Just resets the data and state back to the initial state.
-     */
-    void resetData();
-
     interface Listener {
         /**
-         * Invoked anytime the data's items change. Could be just one item changing its
-         * state, or a feed item's inner item changing state. Also could be a completely
-         * updated data set after a refresh.
-         * @param diff If the implementation supports it, a diff result of what changed. Otherwise null if no diff is available and it could be anything that changed.
+         * Invoked anytime the data's items change.
          */
-        void onDataSourceChanged(DiffUtil.DiffResult diff);
+        void onDataSourceChanged();
 
         /**
          * Invoked as the load state changes.
@@ -181,5 +164,4 @@ public interface DataSourceCache<T> {
         /** @return The throwable if there is one involved. Provide a {@link com.pocket.util.java.UserFacingErrorMessage} if possible. */
         Throwable getError();
     }
-
 }

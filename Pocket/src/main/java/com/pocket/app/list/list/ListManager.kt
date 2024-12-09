@@ -1,6 +1,5 @@
 package com.pocket.app.list.list
 
-import androidx.recyclerview.widget.DiffUtil
 import com.pocket.sdk.Pocket
 import com.pocket.sdk.api.generated.enums.ItemFilterKey
 import com.pocket.sdk.api.generated.enums.ItemSortKey
@@ -13,10 +12,11 @@ import com.pocket.sdk.util.data.DataSourceCache
 import com.pocket.sdk.util.data.SyncCache
 import com.pocket.sdk2.api.legacy.PocketCache
 import com.pocket.util.NoCompareMutableStateFlow
-import com.pocket.util.edit
+import com.pocket.util.NoCompareStateFlow
 import com.pocket.util.equalsAny
 import com.pocket.util.prefs.Preferences
 import com.pocket.util.prefs.StringPreference
+import com.pocket.util.update
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
@@ -39,7 +39,7 @@ class ListManager @Inject constructor(
     )
     val sortFilterState: StateFlow<SortFilterState> = _sortFilterState
     private val _list = NoCompareMutableStateFlow<List<Any>>(listOf())
-    val list: StateFlow<List<Any>> = _list
+    val list: NoCompareStateFlow<List<Any>> = _list
     private val _loadState = MutableStateFlow(DataSourceCache.LoadState.INITIAL)
     val loadState: StateFlow<DataSourceCache.LoadState> = _loadState
 
@@ -51,7 +51,7 @@ class ListManager @Inject constructor(
             field?.clearListeners()
             value?.let { field = it } ?: return
             value.addListener(object : DataSourceCache.Listener {
-                override fun onDataSourceChanged(diff: DiffUtil.DiffResult?) {
+                override fun onDataSourceChanged() {
                     _list.update { value.list }
                 }
 
@@ -118,7 +118,6 @@ class ListManager @Inject constructor(
                     .count(subset.count)
                     .build()
             }
-            .disableDiffUtil()
             .build()
         isRemoteData = false
         syncCache?.loadFirstPage()
@@ -164,15 +163,10 @@ class ListManager @Inject constructor(
                     .offset(subset.offset)
                     .build()
             }
-            .disableDiffUtil()
             .build()
         syncCache?.forceRemote = true
         isRemoteData = true
         syncCache?.loadFirstPage()
-    }
-
-    fun refresh() {
-        syncCache?.refresh()
     }
 
     fun loadNextPage() {
@@ -180,7 +174,7 @@ class ListManager @Inject constructor(
     }
 
     fun setTag(tag: String?) {
-        _sortFilterState.edit { copy(
+        _sortFilterState.update { it.copy(
             tag = tag,
             filters = listOf(ItemFilterKey.TAG)
         ) }
@@ -189,14 +183,14 @@ class ListManager @Inject constructor(
 
     fun updateCurrentSort(itemSortKey: ItemSortKey) {
         sortPreference.set((itemSortKey).value)
-        _sortFilterState.edit { copy(
+        _sortFilterState.update { it.copy(
             sort = itemSortKey
         ) }
         refreshCache()
     }
 
     fun onFilterToggled(filterKey: ItemFilterKey) {
-        _sortFilterState.edit { copy(
+        _sortFilterState.update { it.copy(
             tag = null,
             filters = if (sortFilterState.value.filters.contains(filterKey)) {
                 listOf()
@@ -208,7 +202,7 @@ class ListManager @Inject constructor(
     }
 
     fun addFilter(filterKey: ItemFilterKey) {
-        _sortFilterState.edit { copy(
+        _sortFilterState.update { it.copy(
             tag = null,
             filters = listOf(filterKey)
         ) }
@@ -216,7 +210,7 @@ class ListManager @Inject constructor(
     }
 
     fun clearFilters() {
-        _sortFilterState.edit { copy(
+        _sortFilterState.update { it.copy(
             tag = null,
             filters = listOf()
         ) }
@@ -224,7 +218,7 @@ class ListManager @Inject constructor(
     }
 
     fun setStatusFilter(statusFilter: ListStatus) {
-        _sortFilterState.edit { copy(
+        _sortFilterState.update { it.copy(
             tag = null,
             filters = listOf(),
             listStatus = statusFilter
@@ -233,7 +227,7 @@ class ListManager @Inject constructor(
     }
 
     fun setSearchText(text: String) {
-        _sortFilterState.edit { copy(
+        _sortFilterState.update { it.copy(
             search = text
         ) }
         refreshCache()

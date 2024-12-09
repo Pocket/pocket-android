@@ -17,8 +17,8 @@ android.unitTestVariants.all {
 }
 
 dependencies {
-    api(project(Deps.Pocket.syncPocket))
-    api(project(Deps.Pocket.syncAndroid))
+    api(projects.syncPocket)
+    api(projects.syncAndroid)
 
     testImplementation(Deps.JUnit.junit)
     testImplementation(Deps.Mockito.core)

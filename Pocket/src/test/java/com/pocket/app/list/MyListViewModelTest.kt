@@ -30,8 +30,10 @@ import com.pocket.sdk.util.data.DataSourceCache
 import com.pocket.sdk2.api.legacy.PocketCache
 import com.pocket.sdk2.view.ModelBindingHelper
 import com.pocket.testutils.SharedFlowTracker
+import com.pocket.util.NoCompareMutableStateFlow
 import com.pocket.util.StringLoader
 import com.pocket.util.edit
+import com.pocket.util.update
 import io.mockk.every
 import io.mockk.impl.annotations.SpyK
 import io.mockk.mockk
@@ -102,7 +104,7 @@ class MyListViewModelTest : BaseCoroutineTest() {
 
     private val testItem2 = fakeItem(title = "title2", domain = "domain2")
 
-    private val listManagerList = MutableStateFlow(
+    private val listManagerList = NoCompareMutableStateFlow<List<Any>>(
         listOf(
             testItem1,
             testItem2
@@ -847,7 +849,7 @@ class MyListViewModelTest : BaseCoroutineTest() {
             actual = state.editChipState
         )
 
-        listManagerList.edit { listOf() }
+        listManagerList.update { listOf<Any>() }
 
         assertEquals(
             expected = ChipState(enabled = false),

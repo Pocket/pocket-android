@@ -11,7 +11,7 @@ licensee {
 }
 
 dependencies {
-    implementation(project(Deps.Pocket.syncParser))
+    implementation(projects.syncParser)
     implementation(Deps.Apache.Commons.commonsLang)
     implementation(Deps.Square.JavaPoet.javaPoet)
     implementation(Deps.Jackson.core)

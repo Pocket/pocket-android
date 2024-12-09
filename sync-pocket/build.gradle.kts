@@ -22,7 +22,7 @@ sourceSets {
 }
 
 dependencies {
-    api(project(Deps.Pocket.sync))
+    api(projects.sync)
     
     api(libs.okhttp)
     implementation(libs.okhttp.urlconnection)

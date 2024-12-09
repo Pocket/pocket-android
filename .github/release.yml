@@ -12,6 +12,10 @@ changelog:
       labels:
       - build-setup
       - dependencies
+      - notes
+  - title: Notes (only in internal builds)
+    labels:
+      - notes
   - title: Build setup updates
     labels:
     - build-setup

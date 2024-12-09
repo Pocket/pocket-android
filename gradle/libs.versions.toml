@@ -4,8 +4,8 @@ androidx-activity = "1.9.3"
 androidx-fragment = "1.8.5"
 androidx-navigation = "2.8.4"
 appcenter = "5.0.5"
-dagger = "2.52"
-kotlin = "2.0.21"
+dagger = "2.53"
+kotlin = "2.1.0"
 okhttp = "4.12.0"
 okio = "3.9.1"
 
@@ -35,11 +35,11 @@ androidx-work = { module = "androidx.work:work-runtime", version = "2.10.0" }
 appcenter-distribute = { module = "com.microsoft.appcenter:appcenter-distribute", version.ref = "appcenter" }
 appcenter-distribute-play = { module = "com.microsoft.appcenter:appcenter-distribute-play", version.ref = "appcenter" }
 braze = { module = "com.braze:android-sdk-ui", version = "33.1.0" }
-google-play-billing = { module = "com.android.billingclient:billing-ktx", version = "7.1.1" }
 dagger-hilt = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
 dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
-firebase-bom = { module = "com.google.firebase:firebase-bom", version = "33.6.0" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version = "33.7.0" }
 firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
+google-play-billing = { module = "com.android.billingclient:billing-ktx", version = "7.1.1" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android" }
 kotlinx-coroutines-bom = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-bom", version = "1.9.0" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core" }
@@ -54,19 +54,19 @@ okhttp-urlconnection = { module = "com.squareup.okhttp3:okhttp-urlconnection", v
 okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
 okio-fakefilesystem = { module = "com.squareup.okio:okio-fakefilesystem", version.ref = "okio" }
 plugin-aboutlibraries = { module = "com.mikepenz.aboutlibraries.plugin:aboutlibraries-plugin", version.ref = "aboutlibraries" }
-plugin-android = { module = "com.android.tools.build:gradle", version = "8.7.2" }
+plugin-android = { module = "com.android.tools.build:gradle", version = "8.7.3" }
 plugin-androidx-navigation-safeargs = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "androidx-navigation" }
 plugin-dagger = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 plugin-kotlin-compose = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 plugin-licensee = { module = "app.cash.licensee:licensee-gradle-plugin", version = "1.12.0" }
-plugin-sentry = { module = "io.sentry:sentry-android-gradle-plugin", version = "4.14.0" }
+plugin-sentry = { module = "io.sentry:sentry-android-gradle-plugin", version = "4.14.1" }
 plugin-versions = { module = "com.github.ben-manes:gradle-versions-plugin", version = "0.51.0" }
-r8 = { module = "com.android.tools:r8", version = "8.7.20" }
+r8 = { module = "com.android.tools:r8", version = "8.7.23" }
 robolectric = { module = "org.robolectric:robolectric", version = "4.14.1" }
 sentry = { module = "io.sentry:sentry-android" }
-sentry-bom = { module = "io.sentry:sentry-bom", version = "7.18.0" }
+sentry-bom = { module = "io.sentry:sentry-bom", version = "7.18.1" }
 sentry-okhttp = { module = "io.sentry:sentry-okhttp" }
 snowplow-android-tracker = { module = "com.snowplowanalytics:snowplow-android-tracker", version = "6.0.6" }
 turbine = { module = "app.cash.turbine:turbine", version = "1.2.0" }

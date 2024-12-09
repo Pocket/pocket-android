@@ -25,8 +25,8 @@ composeCompiler {
     includeSourceInformation = true
 }
 dependencies {
-    api(project(Deps.Pocket.analytics))
-    implementation(project(Deps.Pocket.utilsAndroid))
+    api(projects.analytics)
+    implementation(projects.utilsAndroid)
 
     api(Deps.AirBnb.Lottie.lottie)
     api(Deps.AndroidX.ConstraintLayout.constraintLayout)

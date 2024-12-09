@@ -1,8 +1,5 @@
 package com.pocket.sdk.util.data;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.pocket.sdk.Pocket;
 import com.pocket.sdk.api.generated.PocketRemoteStyle;
 import com.pocket.sync.source.PendingResult;
@@ -12,10 +9,7 @@ import com.pocket.sync.source.subscribe.Subscription;
 import com.pocket.sync.thing.Thing;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -32,12 +26,6 @@ import java.util.Map;
  * To load each page it will use Pocket.sync() and then subscribe to it as well to keep it up to date.
  * As pages are loaded/updated, it creates the full list by looping through each page, invoking {@link CollectionGet#collectionFrom(Thing)} and appending the results into one list.
  *
- * <h2>Dependencies</h2>
- * This supports adding additional things that you need loaded into memory before you can display the list. See {@link BuilderStep4#dependsOn}.
- *
- * <h2>Diffing</h2>
- * Automatically sets up a {@link FastOrDieDiffer} that is suitable for working with {@link Thing}s. If you want more refined diffing you can setup your own with {@link #setDiffer(FastOrDieDiffer)}.
- *
  * <h2>Thread Safety</h2>
  * This assumes (but doesn't enforce to avoid performance penalties of checking) all calls to it are on the ui thread.
  * It also assumes that the {@link Pocket.Config#publisher} publishes {@link com.pocket.sync.source.subscribe.Subscriber#onUpdate(Thing)} callbacks to the ui thread.
@@ -53,10 +41,8 @@ public class SyncCache<C, T extends Thing> extends AbsDataSourceCache<C> {
 	private final CollectionGet<C, T> collection;
 	private final Pocket source;
 	private final int pageSize;
-	private final List<Merge<C, T>> merges;
 	private final List<Page<C,T>> pages = new ArrayList<>();
 	private final Map<Thing, Subscription> subs = new HashMap<>();
-	private final Map<Thing, Object> dependsOn = new HashMap<>();
 
 	public boolean forceRemote = false;
 	
@@ -67,10 +53,7 @@ public class SyncCache<C, T extends Thing> extends AbsDataSourceCache<C> {
 		private final SubsetApply<T> subsetApply;
 		private final CollectionGet<C, T> collection;
 		private final Pocket source;
-		private final List<Thing> dependsOn = new ArrayList<>();
-		private final List<Merge<C ,T>> merges = new ArrayList<>();
-		public boolean diffUtilEnabled = true;
-		
+
 		public Config(
 				T identity,
 				PagingStrategy<C> paging,
@@ -97,31 +80,6 @@ public class SyncCache<C, T extends Thing> extends AbsDataSourceCache<C> {
 		this.subsetApply = config.subsetApply;
 		this.collection = config.collection;
 		this.source = config.source;
-		this.merges = config.merges;
-		for (Thing t : config.dependsOn) {
-			this.dependsOn.put(t, null);
-		}
-		if (config.diffUtilEnabled) {
-			setDiffer(new FastOrDieDiffer<>(
-					(FastOrDieDiffer.IdDiff<C>) Object::equals,
-					// Since Thing's use IDENTITY comparisons this should be good for checking ids
-					(oldItem, newItem) -> {
-						if (oldItem instanceof Thing) {
-							return ((Thing) oldItem).equals(Thing.Equality.STATE, newItem);
-						} else { // We aren't forcing a sync cache to use Things as the list data type, so fallback to this logic if not
-							return oldItem.equals(newItem);
-						}
-					},
-					true
-			));
-		}
-	}
-	
-	/** Retrieve the current value of a dependency. See {@link BuilderStep4#dependsOn}. */
-	public <D extends Thing> D dependency(D thing) {
-		Object s = dependsOn.get(thing);
-		if (s instanceof Thing && thing.getClass().isAssignableFrom(s.getClass())) return (D) s;
-		return null;
 	}
 
 	/** Create an empty page instance of what the next page should be (identity wise) based on the current config. */
@@ -138,90 +96,57 @@ public class SyncCache<C, T extends Thing> extends AbsDataSourceCache<C> {
 	@Override
 	protected void doLoadFirstPage() {
 		clearData(); // This can also be called when retrying an empty list, so make sure we clear out all data and subscriptions and retry clean
-		/*
-			This status map will contain the status of each thing we must load before we can display a result.
-			Its key will be the thing we are loading, its value will be its status, one of:
-				null means loading
-				Thing means loaded
-				SyncException means error
-		 */
-		HashMap<Thing, Object> status = new HashMap<>();
-		for (Thing t : dependsOn.keySet()) {
-			status.put(t, null);
-		}
 		Page<C, T> first = nextPage();
-		status.put(first.identity, null);
-		
-		// This will run after each thing is loaded to check if we are ready to display a result.
-		// We'll wait until all have some result before we do anything.
-		Runnable check = () -> {
+
+		// Bind this callback to the first page, this does the initial load plus any future updates.
+		var t = first.identity;
+		// Also stop any subscription this replaces
+		Subscription.stop(subs.put(t, source.bind(forceRemote, t, u -> {
 			Throwable error = null;
-			for (Map.Entry<Thing, Object> result : status.entrySet()) {
-				Object r = result.getValue();
-				if (r == null) {
-					// Something is still loading, wait for next check
-					return;
-				} else if (r instanceof Throwable) {
-					if (error instanceof SyncException) {
-						// An error occurred, prioritize grabbing the page's error if there is more than one.
-						SyncException syncException = (SyncException) error;
-						if (!syncException.result.t.equals(first.identity)) {
-							error = (Throwable) r;
-						}
-					} else if (error == null) {
-						error = (Throwable) r;
-					}
-				} else if (r instanceof Thing) {
-					// Loaded
-				} else {
-					throw new RuntimeException("unexpected result " + r);
-				}
+			try {
+				updatePage(first, u);
+			} catch (Throwable e) {
+				error = e;
 			}
-			// Ok we have a result, otherwise it would have stopped above
-			if (error != null) {
-				clearData();
-				Throwable e = error;
-				setError(new Error() {
-							 @Override public void retry() { loadFirstPage(); }
-							 @Override public Throwable getError() { return e;}
-						 }, LoadState.INITIAL_ERROR);
+			if (pages.isEmpty()) {
+				// First time
+				check(error != null ? new Status.Error(error) : new Status.Loaded<>(first));
 			} else {
-				// Show the list
-				pages.add(first);
+				// Update
 				invalidateList();
 			}
-		};
-		
-		// Bind this callback to the first page plus and dependencies, this does the initial load plus any future updates
-		for (Thing t : new HashSet<>(status.keySet())) {
-			// Also stop any subscription this replaces
-			Subscription.stop(subs.put(t, source.bind(forceRemote, t, u -> {
-				Throwable error = null;
-				if (u.equals(first.identity)) {
-					try {
-						updatePage(first, (T) u);
-					} catch (Throwable e) {
-						error = e;
-					}
-				} else {
-					dependsOn.put(u, u);
-				}
-				if (pages.isEmpty()) {
-					// First time
-					status.put(t, error != null ? error : u);
-					check.run();
-				} else {
-					// Update
-					invalidateList();
-				}
-				
-			}, (e, sub) -> {
-				status.put(t, e);
-				check.run();
-			})));
+		}, (e, sub) -> check(new Status.Error(e)))));
+	}
+
+	/**
+	 * This will run after the thing is loaded to check if we are ready to display a result.
+	 * We'll wait until it has some result before we do anything.
+	 */
+	private void check(Status status) {
+		Throwable error = null;
+		Page<C, T> loaded = null;
+		if (status instanceof Status.Error) {
+			error = ((Status.Error) status).throwable;
+		} else if (status instanceof Status.Loaded) {
+			loaded = ((Status.Loaded<C, T>) status).page;
+		} else {
+			throw new RuntimeException("unexpected status " + status);
+		}
+		// Ok we have a result, otherwise it would have stopped above
+		if (error != null) {
+			clearData();
+			Throwable e = error;
+			setError(new Error() {
+				@Override public void retry() { loadFirstPage(); }
+				@Override public Throwable getError() { return e;}
+			}, LoadState.INITIAL_ERROR);
+		} else {
+			// Show the list
+			pages.add(loaded);
+			invalidateList();
 		}
 	}
-	
+
 	@Override
 	protected void doLoadNextPage() {
 		Page<C, T> next = nextPage();
@@ -278,11 +203,7 @@ public class SyncCache<C, T extends Thing> extends AbsDataSourceCache<C> {
 		} else {
 			isPagingComplete = paging.isPagingComplete(last.subset, last.data);
 		}
-		
-		for (Merge<C ,T> merge : merges) {
-			merge.merge(this, list, isPagingComplete);
-		}
-		
+
 		// Apply this new list
 		setList(list, isPagingComplete);
 	}
@@ -314,14 +235,6 @@ public class SyncCache<C, T extends Thing> extends AbsDataSourceCache<C> {
 				@Override public Throwable getError() { return e;}
 			}, LoadState.LOADED_REFRESH_ERROR))
 			.onComplete(() -> pendingRefresh = null);
-
-		
-		for (Thing t : dependsOn.keySet()) {
-			if (t.remote().style != PocketRemoteStyle.LOCAL) {
-				source.syncRemote(t);
-			}
-			// If it is local, we should get updates automatically already, so no need to refresh
-		}
 	}
 	
 	private void clearData() {
@@ -335,15 +248,6 @@ public class SyncCache<C, T extends Thing> extends AbsDataSourceCache<C> {
 			pendingRefresh = null;
 		}
 		if (paging != null) paging.onReset();
-		for (Thing t : new HashSet<>(dependsOn.keySet())) {
-			dependsOn.put(t, null);
-		}
-	}
-	
-	@Override
-	public void resetData() {
-		super.resetData();
-		clearData();
 	}
 
 	public Thing identity() {
@@ -467,235 +371,7 @@ public class SyncCache<C, T extends Thing> extends AbsDataSourceCache<C> {
 			}
 		}
 	}
-	
-	/** Describes how to merge extra dependencies into the main list of objects. */
-	public interface Merge<C, T extends Thing> {
-		/**
-		 * Modifies the list by merging in some extra objects.
-		 *
-		 * @param cache available to grab a {@link SyncCache#dependency(Thing)}
-		 * @param list list to merge an extra object or objects into
-		 * @param isPagingComplete provided to help deciding if desired merging position might
-		 * become available later
-		 */
-		void merge(SyncCache<C, T> cache, List<C> list, boolean isPagingComplete);
-		
-		/**
-		 * Returns a list of things this merge depends on, so it can be encapsulated in a single
-		 * object and a single call to {@link SyncCache.BuilderStep4#merge(Merge)}.
-		 */
-		@Nullable List<Thing> dependencies();
-		
-		/**
-		 * Start configuring merging a single element into the list by specifying how to get or 
-		 * create the element.
-		 */
-		static <C, E extends C, T extends Thing> SingleElementMerge.Builder<C, E, T> singleElement(
-				SingleElementMerge.Element<C, E, T> element) {
-			return new SingleElementMerge.Builder<>(element);
-		}
-	}
-	
-	/**
-	 * Standard merging logic when adding only a single element to the list.
-	 * 
-	 * @param <C> Collection element type of the sync cache
-	 * @param <E> Element type this merges in
-	 * @param <T> Thing that backs the primary list content of the sync cache
-	 */
-	public static class SingleElementMerge<C, E extends C, T extends Thing> implements Merge<C, T> {
-		private final Element<C, E, T> element;
-		private final Placement<C> placement;
-		private final FailedListener<E> listener;
-		private final List<Thing> dependencies;
-		private E current;
-		
-		SingleElementMerge(@NonNull Element<C, E, T> element,
-				@NonNull Placement<C> placement,
-				@Nullable FailedListener<E> listener,
-				@Nullable List<Thing> dependencies) {
-			this.element = element;
-			this.placement = placement;
-			this.listener = listener;
-			this.dependencies = dependencies;
-		}
-		
-		@Override
-		public void merge(SyncCache<C, T> cache, List<C> list, boolean isPagingComplete) {
-			E element = this.element.get(cache, list);
-			
-			// Remove if needed
-			if (element == null || !element.equals(current)) {
-				// If there is no more element, or if it is a different one, clear the old one out.
-				current = null;
-				placement.setAfter(null);
-			}
-			
-			// Insert if needed
-			if (element != null) {
-				if (current != null) {
-					// Same one, but needs to be reinserted into the data set at the natural order it 
-					// would be as the item data below changes.
-					int position = list.size();
-					for (int i = 0, listSize = list.size(); i < listSize; i++) {
-						C obj = list.get(i);
-						if (placement.wasAfter(obj, i)) continue;
-						
-						position = i;
-						break;
-					}
-					
-					if (position > list.size()) {
-						// It no longer fits, add to end.
-						position = list.size();
-					}
-					current = element;
-					list.add(position, element);
-					
-				} else {
-					// New element, use its starting position
-					int position = placement.startingPosition();
-					if (position >= list.size()) {
-						// Position isn't available yet
-						if (isPagingComplete) {
-							// Fail
-							if (listener != null) listener.onMergeFailed(element);
-						} else {
-							// Wait until paging is complete to see if it will fit later
-						}
-					} else {
-						placement.setAfter(list.get(position));
-						current = element;
-						list.add(position, element);
-					}
-				}
-			}
-		}
-		
-		@Override public List<Thing> dependencies() {
-			return dependencies;
-		}
-		
-		/** Describes how to get or create the element to merge into the list. */
-		public interface Element<C, E extends C, T extends Thing> {
-			E get(SyncCache<C, T> cache, List<C> list);
-		}
-		
-		/** Describes where to place an element with relation to other objects in the list */
-		public interface Placement<C> {
-			/**
-			 * What position to start from when inserting for the first time.
-			 */
-			int startingPosition();
-			
-			/**
-			 * When previously merged into the list, was the SPOC after the given obj or position.
-			 * Use obj or position according to your logic.
-			 */
-			boolean wasAfter(C obj, int position);
-			
-			/**
-			 * Remember position of a new SPOC.
-			 */
-			void setAfter(@Nullable C obj);
-		}
-		
-		/**
-		 * Notifies if a merge failed, i.e. when it wasn't possible to merge the element at the 
-		 * specified {@link Placement}.
-		 */
-		public interface FailedListener<O> {
-			void onMergeFailed(O obj);
-		}
-		
-		public static class Builder<C, E extends C, T extends Thing> {
-			private final Element<C, E, T> element;
-			private Placement<C> placement;
-			private FailedListener<E> listener;
-			private List<Thing> dependencies;
-			
-			/**
-			 * Start building by specifying how to get or create the element to merge into the list.
-			 */
-			public Builder(Element<C, E, T> element) {
-				this.element = element;
-			}
-			
-			/** Set a custom placement implementation. */
-			public Builder<C, E, T> placement(Placement<C> placement) {
-				this.placement = placement;
-				return this;
-			}
-			
-			/**
-			 * Place the element at the starting position and try to keep it place relative to 
-			 * other objects in the list using the comparator.
-			 */
-			public Builder<C, E, T> relativePlacement(int startingPosition, Comparator<C> comparator) {
-				placement = new Placement<C>() {
-					C current;
-					
-					@Override public int startingPosition() {
-						return startingPosition;
-					}
-					
-					@Override public boolean wasAfter(C obj, int position) {
-						return comparator.compare(current, obj) < 0;
-					}
-					
-					@Override public void setAfter(@Nullable C obj) {
-						current = obj;
-					}
-				};
-				return this;
-			}
-			
-			/** Place the element always at the specified position. */
-			public Builder<C, E, T> staticPlacement(int position) {
-				placement = new Placement<C>() {
-					@Override public int startingPosition() {
-						return position;
-					}
-					
-					@Override public boolean wasAfter(Object obj, int position) {
-						return position < startingPosition();
-					}
-					
-					@Override public void setAfter(@Nullable Object obj) {
-						// Nothing to do here, move along.
-					}
-				};
-				return this;
-			}
-			
-			/**
-			 * Set a listener that is called if the merge fails, i.e. it's not possible to merge 
-			 * the element at the requested placement.
-			 */
-			public Builder<C, E, T> onFailure(FailedListener<E> listener) {
-				this.listener = listener;
-				return this;
-			}
-			
-			/** Add a thing this merge depends on. */
-			public Builder<C, E, T> dependsOn(Thing thing) {
-				if (dependencies == null) {
-					dependencies = new LinkedList<>();
-				}
-				
-				dependencies.add(thing);
-				return this;
-			}
-			
-			public SingleElementMerge<C, E, T> build() {
-				if (placement == null) {
-					staticPlacement(0);
-				}
-				return new SingleElementMerge<>(element, placement, listener, dependencies);
-			}
-		}
-	}
-	
+
 	/**
 	 * Create a new builder.
 	 * @param source The source to sync and subscribe from.
@@ -768,48 +444,29 @@ public class SyncCache<C, T extends Thing> extends AbsDataSourceCache<C> {
 		private BuilderStep4(BuilderStep3<C, T> b, PagingStrategy<C> paging, SubsetApply<T> subsetApply) {
 			this.config = new Config<>(b.b.t, paging, subsetApply, b.collection, b.b.source);
 		}
-		
-		/**
-		 * Adds an additional Thing that must be loaded before {@link #setList(List, boolean)} is invoked.
-		 * Can later be retrieved with {@link SyncCache#dependency(Thing)} anytime after {@link #setList(List, boolean)} has been called.
-		 */
-		public BuilderStep4<C, T> dependsOn(Thing t) {
-			config.dependsOn.add(t);
-			return this;
-		}
-		
-		/** Optionally adds logic to merge some extra objects to the list of display objects. */
-		public BuilderStep4<C, T> merge(Merge<C, T> merge) {
-			List<Thing> dependencies = merge.dependencies();
-			if (dependencies != null) {
-				config.dependsOn.addAll(dependencies);
-			}
-			config.merges.add(merge);
-			return this;
-		}
 
-		/**
-		 * A DataSourceCache probably shouldn't be doing the diffs.  The diffs should happen
-		 * in the RecyclerView.Adapter instead.  Most places in the app use the
-		 * DataSourceCache's diff, so I'm adding this property to disable it.
-		 */
-		public BuilderStep4<C, T> disableDiffUtil() {
-			config.diffUtilEnabled = false;
-			return this;
-		}
-		
 		/** @return A config with these settings. */
 		public Config<C,T> config() {
-			Config<C, T> tmp = new Config<>(config.identity, config.paging, config.subsetApply, config.collection, config.source);
-			tmp.dependsOn.addAll(config.dependsOn);
-			tmp.merges.addAll(config.merges);
-			tmp.diffUtilEnabled = config.diffUtilEnabled;
-			return tmp;
+			return new Config<>(config.identity, config.paging, config.subsetApply, config.collection, config.source);
 		}
 		/** @return A cache with these settings. */
 		public SyncCache<C,T> build() {
 			return new SyncCache<>(config());
 		}
 	}
-	
+
+	private interface Status {
+		class Loaded<C, T extends Thing> implements Status {
+			final Page<C, T> page;
+			public Loaded(Page<C, T> page) {
+				this.page = page;
+			}
+		}
+		class Error implements Status {
+			final Throwable throwable;
+			public Error(Throwable exception) {
+				this.throwable = exception;
+			}
+		}
+	}
 }
