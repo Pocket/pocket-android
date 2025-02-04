@@ -559,7 +559,6 @@
 	<string name="my_list_filter_all">すべて</string>
 	<string name="my_list_filter_tagged">タグ付けしました</string>
 	<string name="my_list_filter_favorites">お気に入り</string>
-	<string name="my_list_filter_notes">メモ</string>
 	<string name="my_list_filter_filter">フィルタ</string>
 	<string name="my_list_filter_edit">編集</string>
 	<string name="edit_tags">タグを編集</string>
@@ -580,9 +579,6 @@
 	<string name="empty_list_archive_title">リストを最新に保ちながら整理</string>
 	<string name="empty_list_archive_message">アーカイブアイコンを使用すると、読み終えた保存コンテンツをアーカイブできます。</string>
 	<string name="empty_list_archive_action">アーカイブする方法</string>
-	<string name="empty_list_notes_title">メモはここに表示されます</string>
-	<string name="empty_list_notes_message">上のプラスアイコンまたは下のボタンをタップしてメモを追加します。</string>
-	<string name="empty_list_notes_action">メモを作成</string>
 	
 	<string name="time_to_read_filter_short">短い記事</string>
 	<string name="time_to_read_filter_short_description">10 分未満</string>
@@ -611,19 +607,8 @@
 	<string name="highlights">ハイライト</string>
 	<string name="end_of_article_title">こちらもおすすめ</string>
 	<string name="previous_and_next_setting_description">［次へ］ボタンと［前へ］ボタンで記事間をすばやく移動</string>
-
-	<string name="add_url_title">URLを追加</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">例：https://getpocket.com</string>
 	<string name="add_url_error">有効な URL を入力してください。</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">メモ（オプション）</string>
-	<string tools:ignore="UnusedResources" name="add_note_title">メモを追加</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">タイトル（任意）</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">メモ</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">メモを編集</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">メモを削除</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">このアイテムを削除してよろしいですか？この操作は取り消せません。</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"続行することにより、次に同意したことになります:  \nPocket [利用規約](https://getpocket.com/tos) および [プライバシーに関する通知](https://getpocket.com/privacy)"</string>
 </resources>
