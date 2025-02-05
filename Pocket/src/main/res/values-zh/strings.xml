@@ -47,9 +47,7 @@
 	<string name="ac_get_help">获取帮助</string>
 	<string name="ac_submit">提交</string>
 	<string name="ac_write_review" comment="link to leave a review on the application store">检查</string>
-	<string name="ac_no_thanks">不，谢谢</string>
 	<string name="ac_next">下一步</string>
-	<string name="ac_accept">接受</string>
 	<string name="ac_got_it_caps">知道了</string>
 	<string name="ac_continue">继续</string>
 	<string name="ac_discard_changes">放弃更改</string>
@@ -263,14 +261,6 @@
 	<string name="listen_error_timeout">我们的服务器过了太久才响应。请稍后重试。</string>
 	<string name="listen_error_media_player">出现意外的播放错误</string>
 	<string name="listen_error_server">播放文章时发生问题。请尝试切换为其他语音。</string>
-	
-	<string name="listen_reader_tooltip">点击以尝试随时朗读此文本</string>
-	<plurals name="listen_my_list_toast_title">
-        <item quantity="other">%2$s️您有 %1$d 份未读文本。</item>
-    </plurals>
-	<string name="listen_my_list_toast_title_5000_plus">%1$s️您有数千份文本。</string>
-	<string name="listen_my_list_toast_message">尝试朗读这些文本，时间就会飞逝。</string>
-	<string name="listen_my_list_toast_button">尝试朗读</string>
 	
 	<!-- TTS -->
 	<string name="tts_dg_t">文本到语音转换</string>
@@ -559,7 +549,6 @@
 	<string name="my_list_filter_all">全部</string>
 	<string name="my_list_filter_tagged">已标记</string>
 	<string name="my_list_filter_favorites">收藏夹</string>
-	<string name="my_list_filter_notes">备注</string>
 	<string name="my_list_filter_filter">过滤</string>
 	<string name="my_list_filter_edit">编辑</string>
 	<string name="edit_tags">编辑标签</string>
@@ -580,9 +569,6 @@
 	<string name="empty_list_archive_title">保持您的列表清新整齐</string>
 	<string name="empty_list_archive_message">使用存档图标将您完成的已保存内容存档。</string>
 	<string name="empty_list_archive_action">如何存档</string>
-	<string name="empty_list_notes_title">在此查找您的备注</string>
-	<string name="empty_list_notes_message">点击上方的加号图标或下方的按钮来添加备注。</string>
-	<string name="empty_list_notes_action">创建备注</string>
 	
 	<string name="time_to_read_filter_short">简短</string>
 	<string name="time_to_read_filter_short_description">少于 10 分钟</string>
@@ -611,19 +597,8 @@
 	<string name="highlights">精彩集锦</string>
 	<string name="end_of_article_title">您可能还喜欢</string>
 	<string name="previous_and_next_setting_description">使用“下一个”和“上一个”按钮在文本之间快速移动</string>
-
-	<string name="add_url_title">添加 URL</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">例如 https://getpocket.com</string>
 	<string name="add_url_error">请输入有效的 URL</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">备注（可选）</string>
-	<string name="add_note_title">添加备注</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">标题（可选）</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">备注</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">编辑备注</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">删除备注</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">确定要删除此项目吗？删除后无法恢复。</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"继续使用即表示您同意：  \nPocket [服务条款](https://getpocket.com/tos) 和[隐私声明](https://getpocket.com/privacy)"</string>
 </resources>
