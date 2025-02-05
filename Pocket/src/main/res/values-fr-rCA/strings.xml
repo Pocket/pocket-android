@@ -50,9 +50,7 @@
 	<string name="ac_get_help">Aide</string>
 	<string name="ac_submit">Soumettre</string>
 	<string name="ac_write_review" comment="link to leave a review on the application store">Avis</string>
-	<string name="ac_no_thanks">Non merci</string>
 	<string name="ac_next">Suivant</string>
-	<string name="ac_accept">Accepter</string>
 	<string name="ac_got_it_caps">J\'AI COMPRIS</string>
 	<string name="ac_continue">Continuer</string>
 	<string name="ac_discard_changes">Annuler les changements</string>
@@ -267,15 +265,6 @@
 	<string name="listen_error_timeout">Notre serveur met trop de temps à répondre. Veuillez réessayer plus tard.</string>
 	<string name="listen_error_media_player">Une erreur inconnue s\'est produite lors de la lecture</string>
 	<string name="listen_error_server">Une erreur s\'est produite lors de la lecture de cet article. Essayez de basculer vers une autre voix.</string>
-	
-	<string name="listen_reader_tooltip">Touchez pour essayer d\'écouter cet article pendant votre déplacement</string>
-	<plurals name="listen_my_list_toast_title">
-        <item quantity="one">%2$sVous avez %1$d article non lu.</item>
-        <item quantity="other">%2$sVous avez %1$d articles non lus.</item>
-    </plurals>
-	<string name="listen_my_list_toast_title_5000_plus">%1$sVous avez des milliers d\'articles.</string>
-	<string name="listen_my_list_toast_message">Essayez de les écouter et le temps passera plus rapidement.</string>
-	<string name="listen_my_list_toast_button">Essayez l\'écoute</string>
 	
 	<!-- TTS -->
 	<string name="tts_dg_t">Synthèse texte-parole</string>
@@ -569,7 +558,6 @@
 	<string name="my_list_filter_all">Tous</string>
 	<string name="my_list_filter_tagged">Balisé</string>
 	<string name="my_list_filter_favorites">Favoris</string>
-	<string name="my_list_filter_notes">Notes</string>
 	<string name="my_list_filter_filter">Filtrer</string>
 	<string name="my_list_filter_edit">Modifier</string>
 	<string name="edit_tags">Modifier les balises</string>
@@ -590,9 +578,6 @@
 	<string name="empty_list_archive_title">Gardez votre liste actuelle et épurée</string>
 	<string name="empty_list_archive_message">Archivez les pages sauvegardées dont vous n,avez plus besoin à l\'aide de l\'icône Archive.</string>
 	<string name="empty_list_archive_action">Comment archiver des pages sauvegardées</string>
-	<string name="empty_list_notes_title">Trouvez vos notes ici</string>
-	<string name="empty_list_notes_message">Touchez l\'icône plus ci-dessus ou le bouton ci-dessous pour ajouter une note.</string>
-	<string name="empty_list_notes_action">Créer une note</string>
 	
 	<string name="time_to_read_filter_short">Court</string>
 	<string name="time_to_read_filter_short_description">Moins de 10 min</string>
@@ -621,19 +606,8 @@
 	<string name="highlights">Surligneur</string>
 	<string name="end_of_article_title">Vous pourriez également aimer</string>
 	<string name="previous_and_next_setting_description">Passez rapidement d\'un article à l\'autre grâce aux boutons « Suivant » et « Précédent »</string>
-
-	<string name="add_url_title">Ajouter une URL</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">p. ex. https://getpocket.com</string>
 	<string name="add_url_error">Veuillez entrer une adresse URL valide</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">Note (facultatif)</string>
-	<string name="add_note_title">Ajouter une note</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">Titre (facultatif)</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">Note</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">Modifier la note</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">Supprimer la note</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">Êtes-vous certain de vouloir supprimer cet élément? Vous ne pourrez pas revenir en arrière.</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"En poursuivant, vous acceptez les  \n[Conditions de service](https://getpocket.com/tos) et l'[Avis de confidentialité](https://getpocket.com/privacy) de Pocket."</string>
 </resources>
