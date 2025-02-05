@@ -56,9 +56,7 @@
 	<string name="ac_get_help">Помощь</string>
 	<string name="ac_submit">Отправить</string>
 	<string name="ac_write_review" comment="link to leave a review on the application store">Оставить отзыв</string>
-	<string name="ac_no_thanks">Нет, cпасибо</string>
 	<string name="ac_next">Вперед</string>
-	<string name="ac_accept">Принять</string>
 	<string name="ac_got_it_caps">ПОНЯТНО</string>
 	<string name="ac_continue">Продолжить</string>
 	<string name="ac_discard_changes">Отменить изменения</string>
@@ -275,17 +273,6 @@
 	<string name="listen_error_timeout">Наш сервер слишком долго не отвечает. Попробуйте позже.</string>
 	<string name="listen_error_media_player">При воспроизведении возникла непредвиденная ошибка.</string>
 	<string name="listen_error_server">При воспроизведении этой статьи произошла ошибка. Попробуйте выбрать другой голос.</string>
-	
-	<string name="listen_reader_tooltip">Нажмите, чтобы попробовать прослушать эту статью в дороге</string>
-	<plurals name="listen_my_list_toast_title">
-        <item quantity="one">%2$s️У вас %1$d непрочитанная статья.</item>
-        <item quantity="few">%2$s️У вас %1$d непрочитанные статьи.</item>
-        <item quantity="many">%2$s️У вас %1$d непрочитанных статей.</item>
-        <item quantity="other">%2$s️У вас %1$d непрочитанные статьи.</item>
-    </plurals>
-	<string name="listen_my_list_toast_title_5000_plus">%1$s️У вас тысячи статей.</string>
-	<string name="listen_my_list_toast_message">Попробуйте прослушать их, и время пролетит незаметно.</string>
-	<string name="listen_my_list_toast_button">Попробовать прослушать</string>
 	
 	<!-- TTS -->
 	<string name="tts_dg_t">Text to Speech</string>
@@ -589,7 +576,6 @@
 	<string name="my_list_filter_all">Все</string>
 	<string name="my_list_filter_tagged">Обозначено тегом</string>
 	<string name="my_list_filter_favorites">Избранное</string>
-	<string name="my_list_filter_notes">Примечания</string>
 	<string name="my_list_filter_filter">Фильтр</string>
 	<string name="my_list_filter_edit">Редактировать</string>
 	<string name="edit_tags">Редактировать теги</string>
@@ -610,9 +596,6 @@
 	<string name="empty_list_archive_title">Храните свой список свежим и упорядоченным</string>
 	<string name="empty_list_archive_message">Архивируйте сохраненные материалы с помощью значка архива.</string>
 	<string name="empty_list_archive_action">Как архивировать</string>
-	<string name="empty_list_notes_title">Здесь могут храниться ваши заметки</string>
-	<string name="empty_list_notes_message">Для добавления заметки нажмите на символ плюса выше или нажмите кнопку ниже.</string>
-	<string name="empty_list_notes_action">Создать заметку</string>
 	
 	<string name="time_to_read_filter_short">Короткие</string>
 	<string name="time_to_read_filter_short_description">Менее 10 мин</string>
@@ -641,19 +624,8 @@
 	<string name="highlights">Выделение</string>
 	<string name="end_of_article_title">Вам также может понравиться</string>
 	<string name="previous_and_next_setting_description">Быстрое перемещение между статьями с помощью кнопок «Далее» и «Назад»</string>
-
-	<string name="add_url_title">Добавить URL</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">например https://getpocket.com</string>
 	<string name="add_url_error">Введите правильный URL</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">Примечание (необязательно)</string>
-	<string name="add_note_title">Добавить примечание</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">Заголовок (необязательно)</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">Примечание</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">Редактировать примечание</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">Удалить примечание</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">Вы действительно хотите удалить этот материал? Это действие нельзя отменить.</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"Продолжая, вы соглашаетесь с:  \n[Условиями использования](https://getpocket.com/tos) и [Уведомлением о конфиденциальности](https://getpocket.com/privacy) Pocket"</string>
 </resources>
