@@ -47,9 +47,7 @@
 	<string name="ac_get_help">お問い合わせ</string>
 	<string name="ac_submit">送信</string>
 	<string name="ac_write_review" comment="link to leave a review on the application store">レビューを書く</string>
-	<string name="ac_no_thanks">結構です</string>
 	<string name="ac_next">次へ</string>
-	<string name="ac_accept">承諾</string>
 	<string name="ac_got_it_caps">了解</string>
 	<string name="ac_continue">続行</string>
 	<string name="ac_discard_changes">変更を破棄</string>
@@ -263,14 +261,6 @@
 	<string name="listen_error_timeout">サーバーからの応答に時間がかかっています。後ほどもう一度お試しください。</string>
 	<string name="listen_error_media_player">予期せぬ再生エラーが発生しました</string>
 	<string name="listen_error_server">この記事の再生中にエラーが発生しました。他の音声へ切り替えてみてください。</string>
-	
-	<string name="listen_reader_tooltip">タップしてこの記事を外出先で聴く</string>
-	<plurals name="listen_my_list_toast_title">
-        <item quantity="other">%2$s️未読の記事が%1$d件あります。</item>
-    </plurals>
-	<string name="listen_my_list_toast_title_5000_plus">%1$s記事が数千件あります。</string>
-	<string name="listen_my_list_toast_message">記事を聴いてみましょう。 瞬く間に 時間がすぎます。</string>
-	<string name="listen_my_list_toast_button">聴いてみる</string>
 	
 	<!-- TTS -->
 	<string name="tts_dg_t">テキスト読み上げ</string>
@@ -559,7 +549,6 @@
 	<string name="my_list_filter_all">すべて</string>
 	<string name="my_list_filter_tagged">タグ付けしました</string>
 	<string name="my_list_filter_favorites">お気に入り</string>
-	<string name="my_list_filter_notes">メモ</string>
 	<string name="my_list_filter_filter">フィルタ</string>
 	<string name="my_list_filter_edit">編集</string>
 	<string name="edit_tags">タグを編集</string>
@@ -580,9 +569,6 @@
 	<string name="empty_list_archive_title">リストを最新に保ちながら整理</string>
 	<string name="empty_list_archive_message">アーカイブアイコンを使用すると、読み終えた保存コンテンツをアーカイブできます。</string>
 	<string name="empty_list_archive_action">アーカイブする方法</string>
-	<string name="empty_list_notes_title">メモはここに表示されます</string>
-	<string name="empty_list_notes_message">上のプラスアイコンまたは下のボタンをタップしてメモを追加します。</string>
-	<string name="empty_list_notes_action">メモを作成</string>
 	
 	<string name="time_to_read_filter_short">短い記事</string>
 	<string name="time_to_read_filter_short_description">10 分未満</string>
@@ -611,19 +597,8 @@
 	<string name="highlights">ハイライト</string>
 	<string name="end_of_article_title">こちらもおすすめ</string>
 	<string name="previous_and_next_setting_description">［次へ］ボタンと［前へ］ボタンで記事間をすばやく移動</string>
-
-	<string name="add_url_title">URLを追加</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">例：https://getpocket.com</string>
 	<string name="add_url_error">有効な URL を入力してください。</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">メモ（オプション）</string>
-	<string name="add_note_title">メモを追加</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">タイトル（任意）</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">メモ</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">メモを編集</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">メモを削除</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">このアイテムを削除してよろしいですか？この操作は取り消せません。</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"続行することにより、次に同意したことになります:  \nPocket [利用規約](https://getpocket.com/tos) および [プライバシーに関する通知](https://getpocket.com/privacy)"</string>
 </resources>
