@@ -50,9 +50,7 @@
 	<string name="ac_get_help">Obter Ajuda</string>
 	<string name="ac_submit">Enviar</string>
 	<string name="ac_write_review" comment="link to leave a review on the application store">Opinião</string>
-	<string name="ac_no_thanks">Não, obrigado</string>
 	<string name="ac_next">Próximo</string>
-	<string name="ac_accept">Aceitar</string>
 	<string name="ac_got_it_caps">ENTENDI</string>
 	<string name="ac_continue">Continuar</string>
 	<string name="ac_discard_changes">Descartar alterações</string>
@@ -267,15 +265,6 @@
 	<string name="listen_error_timeout">Nosso servidor está demorando muito para responder. Tente novamente depois.</string>
 	<string name="listen_error_media_player">Ocorreu um erro inesperado durante a reprodução</string>
 	<string name="listen_error_server">Ocorreu um problema ao reproduzir este artigo. Tente usar outra voz.</string>
-	
-	<string name="listen_reader_tooltip">Toque para ouvir este artigo em qualquer lugar</string>
-	<plurals name="listen_my_list_toast_title">
-        <item quantity="one">%2$s️Você tem %1$d artigo não lido.</item>
-        <item quantity="other">%2$s️Você tem %1$d artigos não lidos.</item>
-    </plurals>
-	<string name="listen_my_list_toast_title_5000_plus">%1$s️Você tem milhares de artigos.</string>
-	<string name="listen_my_list_toast_message">Experimente ouvir seus artigos, e o tempo passará voando.</string>
-	<string name="listen_my_list_toast_button">Experimente Ouvir</string>
 	
 	<!-- TTS -->
 	<string name="tts_dg_t">Conversão de Texto para Voz</string>
@@ -569,7 +558,6 @@
 	<string name="my_list_filter_all">Todos</string>
 	<string name="my_list_filter_tagged">Com tag </string>
 	<string name="my_list_filter_favorites">Favoritos</string>
-	<string name="my_list_filter_notes">Observações</string>
 	<string name="my_list_filter_filter">Filtrar</string>
 	<string name="my_list_filter_edit">Editar</string>
 	<string name="edit_tags">Editar tags</string>
@@ -590,9 +578,6 @@
 	<string name="empty_list_archive_title">Mantenha sua lista atualizada e organizada</string>
 	<string name="empty_list_archive_message">Use o ícone de arquivar para guardar os itens salvos que você não precisa mais acessar.</string>
 	<string name="empty_list_archive_action">Como arquivar</string>
-	<string name="empty_list_notes_title">Encontre suas anotações aqui</string>
-	<string name="empty_list_notes_message">Toque no ícone de mais acima ou no botão abaixo para adicionar uma nota.</string>
-	<string name="empty_list_notes_action">Criar anotação</string>
 	
 	<string name="time_to_read_filter_short">Curto</string>
 	<string name="time_to_read_filter_short_description">Menos de 10 minutos</string>
@@ -621,19 +606,8 @@
 	<string name="highlights">Destaques</string>
 	<string name="end_of_article_title">Você também pode gostar</string>
 	<string name="previous_and_next_setting_description">Use os botões \"Seguinte\" e \"Anterior\" para passar rapidamente de um artigo para outro</string>
-
-	<string name="add_url_title">Adicionar URL</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">por exemplo,https://getpocket.com</string>
 	<string name="add_url_error">Digite um URL válido</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">Nota (opcional)</string>
-	<string name="add_note_title">Adicionar anotação</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">Título (opcional)</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">Observação</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">Editar anotação</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">Excluir anotação</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">Tem certeza de que deseja excluir este item? Essa ação é irreversível.</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"Ao continuar, você concorda com:  \nos [Termos de Serviço](https://getpocket.com/tos) e com o [Aviso de Privacidade](https://getpocket.com/privacy) do Pocket"</string>
 </resources>
