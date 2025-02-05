@@ -50,9 +50,7 @@
 	<string name="ac_get_help">Hulp</string>
 	<string name="ac_submit">Versturen</string>
 	<string name="ac_write_review" comment="link to leave a review on the application store">Beoordeling</string>
-	<string name="ac_no_thanks">Neen bedankt</string>
 	<string name="ac_next">Volgende</string>
-	<string name="ac_accept">Aanvaarden</string>
 	<string name="ac_got_it_caps">OK</string>
 	<string name="ac_continue">Doorgaan</string>
 	<string name="ac_discard_changes">Wijzigingen negeren</string>
@@ -267,15 +265,6 @@
 	<string name="listen_error_timeout">Onze server heeft te lang nodig om te reageren. Probeer het later opnieuw.</string>
 	<string name="listen_error_media_player">Er is een onverwachte afspeelfout opgetreden</string>
 	<string name="listen_error_server">Er is een probleem opgetreden bij het afspelen van dit artikel. Probeer een andere stem.</string>
-	
-	<string name="listen_reader_tooltip">Tik om dit artikel onderweg te beluisteren</string>
-	<plurals name="listen_my_list_toast_title">
-        <item quantity="one">%2$s️Je hebt %1$d ongelezen artikel.</item>
-        <item quantity="other">%2$s️Je hebt %1$d ongelezen artikelen.</item>
-    </plurals>
-	<string name="listen_my_list_toast_title_5000_plus">%1$s️Je hebt duizenden artikelen.</string>
-	<string name="listen_my_list_toast_message">Beluister ze en de tijd vliegt voorbij.</string>
-	<string name="listen_my_list_toast_button">Probeer Luisteren</string>
 	
 	<!-- TTS -->
 	<string name="tts_dg_t">Tekst naar spraak</string>
@@ -569,7 +558,6 @@
 	<string name="my_list_filter_all">Alle</string>
 	<string name="my_list_filter_tagged">Getagd</string>
 	<string name="my_list_filter_favorites">Favorieten</string>
-	<string name="my_list_filter_notes">Aantekening</string>
 	<string name="my_list_filter_filter">Filteren</string>
 	<string name="my_list_filter_edit">Bewerken</string>
 	<string name="edit_tags">Tags bewerken</string>
@@ -590,9 +578,6 @@
 	<string name="empty_list_archive_title">Houd je lijst up-to-date en geordend</string>
 	<string name="empty_list_archive_message">Archiveer opgeslagen artikelen die je al hebt gelezen via het archief-pictogram.</string>
 	<string name="empty_list_archive_action">Artikelen archiveren</string>
-	<string name="empty_list_notes_title">Vind hier je aantekeningen.</string>
-	<string name="empty_list_notes_message">Tik op het pluspictogram hierboven of de knop hieronder om een aantekening toe te voegen.</string>
-	<string name="empty_list_notes_action">Aantekening maken</string>
 	
 	<string name="time_to_read_filter_short">Kort</string>
 	<string name="time_to_read_filter_short_description">Minder dan 10 minuten</string>
@@ -621,19 +606,8 @@
 	<string name="highlights">Markeringen</string>
 	<string name="end_of_article_title">Misschien vind je dit ook leuk</string>
 	<string name="previous_and_next_setting_description">Wissel snel tussen artikelen met de knoppen \'Volgende\' en \'Vorige\'</string>
-
-	<string name="add_url_title">URL toevoegen</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">bijv. https://getpocket.com</string>
 	<string name="add_url_error">Voer een geldige URL in</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">Aantekening (optioneel)</string>
-	<string name="add_note_title">Notitie toevoegen</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">Titel (optioneel)</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">Aantekening</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">Notitie bewerken</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">Notitie verwijderen</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">Weet je zeker dat je dit item wilt verwijderen? Dit kan niet ongedaan gemaakt worden.</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"Door verder te gaan, ga je akkoord met:  \nde [Servicevoorwaarden](https://getpocket.com/tos) en [Privacyverklaring](https://getpocket.com/privacy) van Pocket."</string>
 </resources>
