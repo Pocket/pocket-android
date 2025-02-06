@@ -451,7 +451,7 @@
 	<string name="prem_setting_faq">Pocket Premium FAQ（よくある質問）</string>
 	<string name="prem_setting_contact">Pocket サポートに問い合わせ</string>
 	<string name="prem_setting_premium_header">Premium</string>
-	<string name="prem_setting_upgrade">Premium にアップグレード</string>
+	<string tools:ignore="UnusedResources" name="prem_setting_upgrade">Premium にアップグレード</string>
 	<string name="prem_setting_restore">既存の購読を復元</string>
 	
 	<string name="purchase_error_offline_t">オフラインのようです</string>
