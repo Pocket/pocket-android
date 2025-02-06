@@ -451,7 +451,7 @@
 	<string name="prem_setting_faq">Pocket Premium 常見問題</string>
 	<string name="prem_setting_contact">聯絡 Pocket 支援</string>
 	<string name="prem_setting_premium_header">Premium</string>
-	<string name="prem_setting_upgrade">升級到 Premium</string>
+	<string tools:ignore="UnusedResources" name="prem_setting_upgrade">升級到 Premium</string>
 	<string name="prem_setting_restore">還原現有訂購</string>
 	
 	<string name="purchase_error_offline_t">您似乎已離線</string>
@@ -549,7 +549,6 @@
 	<string name="my_list_filter_all">全部</string>
 	<string name="my_list_filter_tagged">已標記</string>
 	<string name="my_list_filter_favorites">我的最愛</string>
-	<string name="my_list_filter_notes">附註</string>
 	<string name="my_list_filter_filter">篩選</string>
 	<string name="my_list_filter_edit">編輯</string>
 	<string name="edit_tags">編輯標籤</string>
@@ -570,9 +569,6 @@
 	<string name="empty_list_archive_title">及時更新和整理您的清單</string>
 	<string name="empty_list_archive_message">使用封存圖示封存已讀完的儲存內容。</string>
 	<string name="empty_list_archive_action">如何封存</string>
-	<string name="empty_list_notes_title">在此處查找你的附註</string>
-	<string name="empty_list_notes_message">點選上方加號圖示或下方按鈕，即可新增附註。</string>
-	<string name="empty_list_notes_action">建立附註</string>
 	
 	<string name="time_to_read_filter_short">簡短</string>
 	<string name="time_to_read_filter_short_description">短於 10 分鐘</string>
@@ -601,19 +597,8 @@
 	<string name="highlights">標記</string>
 	<string name="end_of_article_title">您可能也喜歡</string>
 	<string name="previous_and_next_setting_description">使用「下一個」和「上一個」按鈕在文章之間快速移動</string>
-
-	<string name="add_url_title">新增 URL</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">例如 https://getpocket.com</string>
 	<string name="add_url_error">請輸入有效的 URL</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">附註（選擇性）</string>
-	<string name="add_note_title">新增附註</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">標題（選擇性）</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">附註</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">編輯附註</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">刪除附註</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">確定要刪除此項目？這將無法復原。</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"繼續操作即表示您同意：  \nPocket [服務條款] (https://getpocket.com/tos) 和[隱私權聲明] (https://getpocket.com/privacy)"</string>
 </resources>
