@@ -460,7 +460,7 @@
 	<string name="prem_setting_faq">Preguntas y respuestas sobre Pocket Premium</string>
 	<string name="prem_setting_contact">Contactar con el equipo de atención al cliente de Pocket</string>
 	<string name="prem_setting_premium_header">Premium</string>
-	<string name="prem_setting_upgrade">Actualizar a Premium</string>
+	<string tools:ignore="UnusedResources" name="prem_setting_upgrade">Actualizar a Premium</string>
 	<string name="prem_setting_restore">Restaurar una suscripción existente</string>
 	
 	<string name="purchase_error_offline_t">Parece que no tienes conexión</string>
