@@ -451,7 +451,7 @@
 	<string name="prem_setting_faq">Pocket Premium FAQ</string>
 	<string name="prem_setting_contact">Pocket 지원팀 문의</string>
 	<string name="prem_setting_premium_header">Premium</string>
-	<string name="prem_setting_upgrade">Premium 으로 업그레이드</string>
+	<string tools:ignore="UnusedResources" name="prem_setting_upgrade">Premium 으로 업그레이드</string>
 	<string name="prem_setting_restore">기존 구독 복원</string>
 	
 	<string name="purchase_error_offline_t">오프라인 상태인 것 같습니다</string>
