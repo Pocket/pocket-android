@@ -451,7 +451,7 @@
 	<string name="prem_setting_faq">Pocket Premium FAQ</string>
 	<string name="prem_setting_contact">Pocket 지원팀 문의</string>
 	<string name="prem_setting_premium_header">Premium</string>
-	<string name="prem_setting_upgrade">Premium 으로 업그레이드</string>
+	<string tools:ignore="UnusedResources" name="prem_setting_upgrade">Premium 으로 업그레이드</string>
 	<string name="prem_setting_restore">기존 구독 복원</string>
 	
 	<string name="purchase_error_offline_t">오프라인 상태인 것 같습니다</string>
@@ -549,7 +549,6 @@
 	<string name="my_list_filter_all">전체</string>
 	<string name="my_list_filter_tagged">태그 지정됨</string>
 	<string name="my_list_filter_favorites">즐겨찾기</string>
-	<string name="my_list_filter_notes">메모</string>
 	<string name="my_list_filter_filter">필터</string>
 	<string name="my_list_filter_edit">편집</string>
 	<string name="edit_tags">태그 편집</string>
@@ -570,9 +569,6 @@
 	<string name="empty_list_archive_title">목록을 깔끔하게 정리해 보세요</string>
 	<string name="empty_list_archive_message">보관 아이콘을 사용하여 작업이 완료된 저장 항목을 보관해 보세요.</string>
 	<string name="empty_list_archive_action">보관 방법</string>
-	<string name="empty_list_notes_title">여기에서 메모를 확인해 보세요</string>
-	<string name="empty_list_notes_message">메모를 추가하려면 위의 더하기 아이콘이나 아래의 버튼을 누르세요.</string>
-	<string name="empty_list_notes_action">메모 생성</string>
 	
 	<string name="time_to_read_filter_short">짧게</string>
 	<string name="time_to_read_filter_short_description">10분 미만</string>
@@ -601,19 +597,8 @@
 	<string name="highlights">하이라이트</string>
 	<string name="end_of_article_title">추천 콘텐츠</string>
 	<string name="previous_and_next_setting_description">\'다음\' 및 \'이전\' 버튼을 사용하여 아티클 간에 빠르게 이동할 수 있습니다</string>
-
-	<string name="add_url_title">URL 추가</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">예 https://getpocket.com</string>
 	<string name="add_url_error">유효한 URL을 입력하십시오</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">메모(선택 사항)</string>
-	<string name="add_note_title">메모 추가</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">제목(선택 사항)</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">메모</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">메모 편집</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">메모 삭제</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">이 항목을 삭제하시겠습니까? 이 작업 실행을 취소할 수 없습니다.</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"계속 진행하면  \nPocket [서비스 약관](https://getpocket.com/tos) 및 [개인정보 보호정책](https://getpocket.com/privacy)에 동의하는 것으로 간주됩니다"</string>
 </resources>
