@@ -478,7 +478,7 @@
 	<string name="prem_setting_faq">Najczęściej zadawane pytania dotyczące aplikacji Pocket Premium</string>
 	<string name="prem_setting_contact">Skontaktuj się z pomocą techniczną Pocket</string>
 	<string name="prem_setting_premium_header">Premium</string>
-	<string name="prem_setting_upgrade">Uaktualnij do wersji Premium</string>
+	<string tools:ignore="UnusedResources" name="prem_setting_upgrade">Uaktualnij do wersji Premium</string>
 	<string name="prem_setting_restore">Przywróć istniejącą subskrypcję</string>
 	
 	<string name="purchase_error_offline_t">Wygląda na to, jesteś w trybie offline</string>
