@@ -478,7 +478,7 @@
 	<string name="prem_setting_faq">Часто задаваемые вопросы по Pocket Premium</string>
 	<string name="prem_setting_contact">Связаться со Службой поддержки Pocket</string>
 	<string name="prem_setting_premium_header">Premium</string>
-	<string name="prem_setting_upgrade">Перейти на Premium</string>
+	<string tools:ignore="UnusedResources" name="prem_setting_upgrade">Перейти на Premium</string>
 	<string name="prem_setting_restore">Восстановить существующую пописку</string>
 	
 	<string name="purchase_error_offline_t">Похоже, вы не в сети</string>
