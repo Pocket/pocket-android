@@ -451,7 +451,7 @@
 	<string name="prem_setting_faq">Pocket Premium 常见问题</string>
 	<string name="prem_setting_contact">联系 Pocket 支持</string>
 	<string name="prem_setting_premium_header">Premium</string>
-	<string name="prem_setting_upgrade">升级到 Premium</string>
+	<string tools:ignore="UnusedResources" name="prem_setting_upgrade">升级到 Premium</string>
 	<string name="prem_setting_restore">恢复现有订购</string>
 	
 	<string name="purchase_error_offline_t">您可能处于离线状态</string>
