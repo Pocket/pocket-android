@@ -23,10 +23,6 @@
     <string name="ic_back">巻き戻し</string>
     <string name="ic_cancel">キャンセル</string>
     <string name="ic_listen">聴く</string>
-    <string name="ic_like">いいね！</string>
-    <string name="ic_remove_like">いいね！を解除</string>
-    <string name="ic_repost">再投稿</string>
-    <string name="ic_remove_repost">再投稿を削除</string>
     <string name="ic_plus">+</string>
     <string name="ic_minus">-</string>
     <string name="ic_close">閉じる</string>
@@ -48,9 +44,6 @@
     <string name="upgrade">アップグレード</string>
     <string name="upgrade_upsell">他のカスタマイズオプションをアンロック</string>
     <string name="get_premium">Premium に登録</string>
-    
-    <string name="counts_thousands" comment="number abbreviated to thousands. such as 1k for 1,000. as short as possible.">%1$d000</string>
-    <string name="counts_millions" comment="number abbreviated to millions. such as 1m for 1,000,000. as short as possible">%1$d百万</string>
     
     <!-- content descriptions -->
     <string name="setting_incrementor" comment="{setting} is a placeholder for a text style setting, eg Text Size, Line Height, or Margin, do not translate the content within {}">{setting}を大きくする</string>
