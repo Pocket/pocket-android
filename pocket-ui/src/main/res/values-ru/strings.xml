@@ -23,10 +23,6 @@
     <string name="ic_back">Назад</string>
     <string name="ic_cancel">Отмена</string>
     <string name="ic_listen">Слушать</string>
-    <string name="ic_like">Нравится</string>
-    <string name="ic_remove_like">Удалить отметку \"Понравилось\"</string>
-    <string name="ic_repost">Репост</string>
-    <string name="ic_remove_repost">Удалить сообщение</string>
     <string name="ic_plus">+</string>
     <string name="ic_minus">-</string>
     <string name="ic_close">Закрыть</string>
@@ -48,9 +44,6 @@
     <string name="upgrade">Улучшить</string>
     <string name="upgrade_upsell">Больше настроек</string>
     <string name="get_premium">Перейти на Premium</string>
-    
-    <string name="counts_thousands" comment="number abbreviated to thousands. such as 1k for 1,000. as short as possible.">%1$dK</string>
-    <string name="counts_millions" comment="number abbreviated to millions. such as 1m for 1,000,000. as short as possible">%1$dM</string>
     
     <!-- content descriptions -->
     <string name="setting_incrementor" comment="{setting} is a placeholder for a text style setting, eg Text Size, Line Height, or Margin, do not translate the content within {}">Увеличить {setting}</string>
