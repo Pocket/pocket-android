@@ -23,10 +23,6 @@
     <string name="ic_back">Zurück springen</string>
     <string name="ic_cancel">Abbrechen</string>
     <string name="ic_listen">Anhören</string>
-    <string name="ic_like">Gefällt mir</string>
-    <string name="ic_remove_like">Like entfernen</string>
-    <string name="ic_repost">Weiterposten</string>
-    <string name="ic_remove_repost">Weitergeposteten Beitrag entfernen</string>
     <string name="ic_plus">+</string>
     <string name="ic_minus">–</string>
     <string name="ic_close">Schließen</string>
@@ -48,9 +44,6 @@
     <string name="upgrade">Upgrade</string>
     <string name="upgrade_upsell">Weitere Anpassungsoptionen freischalten</string>
     <string name="get_premium">Hol dir Premium</string>
-    
-    <string name="counts_thousands" comment="number abbreviated to thousands. such as 1k for 1,000. as short as possible.">%1$d T</string>
-    <string name="counts_millions" comment="number abbreviated to millions. such as 1m for 1,000,000. as short as possible">%1$d Mio.</string>
     
     <!-- content descriptions -->
     <string name="setting_incrementor" comment="{setting} is a placeholder for a text style setting, eg Text Size, Line Height, or Margin, do not translate the content within {}">{setting} vergrößern</string>
