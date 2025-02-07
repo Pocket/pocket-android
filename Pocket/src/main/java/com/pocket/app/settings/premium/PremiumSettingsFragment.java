@@ -43,7 +43,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PremiumSettingsFragment extends AbsPrefsFragment {
-	
+
+	private static final String PREMIUM_FAQ = "https://support.mozilla.org/kb/pocket-premium-faq";
 	private static final String ARG_INFO = "info";
 	
 	public static FragmentLaunchMode getLaunchMode(Activity activity) {
@@ -196,15 +197,24 @@ public class PremiumSettingsFragment extends AbsPrefsFragment {
 			// Manage your subscription > google play
 			prefs.add(PreferenceViews.newActionBuilder(this, R.string.prem_setting_manage_your_subscription)
 					.setOnClickListener(() -> {
-						if (subscriptionInfo.source == PurchaseSource.GOOGLEPLAY
-								&& App.viewUrl(getActivity(), "market://details?id=com.ideashower.readitlater.pro")) {
-							// Already launched via App.viewUrl above.
-							
+						if (subscriptionInfo.source == PurchaseSource.GOOGLEPLAY) {
+							var url = "https://play.google.com/store/account/subscriptions";
+							if (subscriptionInfo.is_active) {
+								// If the subscription is active we can append extra details
+								// and open subscription details directly.
+								url += "?package=com.ideashower.readitlater.pro&sku=" +
+										subscriptionInfo.order_id;
+							} else {
+								// If it's not active, we can only open the main subscriptions
+								// screen where the subscription is in the expired section.
+							}
+							App.viewUrl(getActivity(), url);
+
 						} else if (subscriptionInfo.source == PurchaseSource.WEB) {
 							App.viewUrl(getActivity(), "https://getpocket.com/premium/manage");
 							
 						} else {
-							App.viewUrl(getActivity(), "https://help.getpocket.com/customer/portal/articles/1545683");
+							App.viewUrl(getActivity(), PREMIUM_FAQ);
 						}
 					})
 				.build());
@@ -243,10 +253,9 @@ public class PremiumSettingsFragment extends AbsPrefsFragment {
 			prefs.add(PreferenceViews.newHeader(this, R.string.prem_setting_premium_header));
 			
 			// Upgrade
-			prefs.add(PreferenceViews.newActionBuilder(this, R.string.prem_setting_manage_your_subscription)
-					.setOnClickListener(() -> App.viewUrl(getContext(), "https://play.google.com/store/account/subscriptions"))
-				.build());
-			
+			prefs.add(PreferenceViews.newActionBuilder(this, R.string.prem_setting_upgrade)
+					.setOnClickListener(() -> app().premium().showUpgradeScreen(getActivity(), CxtSource.PREMIUM_SETTINGS))				.build());
+
 			// Restore
 			prefs.add(PreferenceViews.newActionBuilder(this, R.string.prem_setting_restore)
 					.setOnClickListener(() -> purchaseHelper.restorePurchase())
@@ -260,7 +269,7 @@ public class PremiumSettingsFragment extends AbsPrefsFragment {
 		
 		// FAQ
 		prefs.add(PreferenceViews.newActionBuilder(this, R.string.prem_setting_faq)
-				.setOnClickListener(() -> App.viewUrl(getActivity(), "https://help.getpocket.com/customer/portal/articles/1545683"))
+				.setOnClickListener(() -> App.viewUrl(getActivity(), PREMIUM_FAQ))
 			.build());
 		
 		// Contact Us

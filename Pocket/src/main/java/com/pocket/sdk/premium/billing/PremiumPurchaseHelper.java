@@ -29,7 +29,7 @@ import com.pocket.sdk.util.dialog.AlertMessaging;
  */
 public class PremiumPurchaseHelper implements PremiumBillingCallbacks {
 	
-	private static final String HELP_URL_ACTIVATION = "http://help.getpocket.com/customer/portal/articles/1531047";
+	private static final String HELP_URL_ACTIVATION = "https://support.mozilla.org/kb/trouble-activating-or-restoring-your-pocket-premium-subscription";
 	
 	public enum PurchasingState {
 		PURCHASING, RESTORING, ACTIVATING, IDLE
