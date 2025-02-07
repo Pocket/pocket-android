@@ -23,10 +23,6 @@
     <string name="ic_back">跳過倒轉</string>
     <string name="ic_cancel">取消</string>
     <string name="ic_listen">朗讀</string>
-    <string name="ic_like">讚</string>
-    <string name="ic_remove_like">取消喜歡</string>
-    <string name="ic_repost">轉發</string>
-    <string name="ic_remove_repost">移除轉發</string>
     <string name="ic_plus">+</string>
     <string name="ic_minus">-</string>
     <string name="ic_close">關閉</string>
@@ -48,9 +44,6 @@
     <string name="upgrade">升級</string>
     <string name="upgrade_upsell">解鎖更多自訂選項</string>
     <string name="get_premium">取得 Premium</string>
-    
-    <string name="counts_thousands" comment="number abbreviated to thousands. such as 1k for 1,000. as short as possible.">%1$d,000</string>
-    <string name="counts_millions" comment="number abbreviated to millions. such as 1m for 1,000,000. as short as possible">%1$d00 萬</string>
     
     <!-- content descriptions -->
     <string name="setting_incrementor" comment="{setting} is a placeholder for a text style setting, eg Text Size, Line Height, or Margin, do not translate the content within {}">增大{setting}</string>
