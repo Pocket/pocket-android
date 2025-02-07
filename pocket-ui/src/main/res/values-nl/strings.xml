@@ -23,10 +23,6 @@
     <string name="ic_back">Terug</string>
     <string name="ic_cancel">Annuleren</string>
     <string name="ic_listen">Luisteren</string>
-    <string name="ic_like">Leuk vinden</string>
-    <string name="ic_remove_like">Vind-ik-leuk verwijderen</string>
-    <string name="ic_repost">Opnieuw plaatsen</string>
-    <string name="ic_remove_repost">Opnieuw geplaatst bericht verwijderen</string>
     <string name="ic_plus">+</string>
     <string name="ic_minus">-</string>
     <string name="ic_close">Sluiten</string>
@@ -48,9 +44,6 @@
     <string name="upgrade">Bijwerken</string>
     <string name="upgrade_upsell">Krijg toegang tot meer opties voor aanpassen</string>
     <string name="get_premium">Koop Premium</string>
-    
-    <string name="counts_thousands" comment="number abbreviated to thousands. such as 1k for 1,000. as short as possible.">%1$dK</string>
-    <string name="counts_millions" comment="number abbreviated to millions. such as 1m for 1,000,000. as short as possible">%1$d mln</string>
     
     <!-- content descriptions -->
     <string name="setting_incrementor" comment="{setting} is a placeholder for a text style setting, eg Text Size, Line Height, or Margin, do not translate the content within {}">{setting} vergroten</string>
