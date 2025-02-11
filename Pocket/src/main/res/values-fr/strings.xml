@@ -558,7 +558,6 @@
 	<string name="my_list_filter_all">Tous</string>
 	<string name="my_list_filter_tagged">Avec label</string>
 	<string name="my_list_filter_favorites">Favoris</string>
-	<string name="my_list_filter_notes">Remarques</string>
 	<string name="my_list_filter_filter">Filtrer</string>
 	<string name="my_list_filter_edit">Modifier</string>
 	<string name="edit_tags">Modifier les labels</string>
@@ -579,9 +578,6 @@
 	<string name="empty_list_archive_title">Faites place nette dans votre liste</string>
 	<string name="empty_list_archive_message">Archivez les sauvegardes que vous avez terminées à l’aide de l’icône d’archive.</string>
 	<string name="empty_list_archive_action">Comment archiver</string>
-	<string name="empty_list_notes_title">Retrouvez vos remarques ici</string>
-	<string name="empty_list_notes_message">Appuyez sur l\'icône plus ci-dessus ou sur le bouton ci-dessous pour ajouter une remarque.</string>
-	<string name="empty_list_notes_action">Créer une remarque</string>
 	
 	<string name="time_to_read_filter_short">Court</string>
 	<string name="time_to_read_filter_short_description">Moins de 10 min</string>
@@ -610,19 +606,8 @@
 	<string name="highlights">Surbrillances</string>
 	<string name="end_of_article_title">Vous pourriez aussi aimer</string>
 	<string name="previous_and_next_setting_description">Passez rapidement d\'un article à l\'autre grâce aux boutons « Suivant » et « Précédent »</string>
-
-	<string name="add_url_title">Ajouter une URL</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">par ex. https://getpocket.com</string>
 	<string name="add_url_error">Veuillez saisir une URL valide</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">Remarque (facultatif)</string>
-	<string name="add_note_title">Ajouter une remarque</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">Titre (facultatif)</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">Remarque</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">Modifier la remarque</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">Supprimer la remarque</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">Voulez-vous vraiment supprimer cet élément ? Cette opération ne peut pas être annulée.</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"En poursuivant, vous acceptez :  \nles [Conditions générales d'utilisation](https://getpocket.com/tos) et l'[Avis de confidentialité](https://getpocket.com/privacy) de Pocket."</string>
 </resources>
