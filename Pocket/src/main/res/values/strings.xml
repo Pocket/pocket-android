@@ -457,7 +457,7 @@
 	<string name="prem_setting_faq">Pocket Premium FAQ</string>
 	<string name="prem_setting_contact">Contact Pocket Support</string>
 	<string name="prem_setting_premium_header">Premium</string>
-	<string tools:ignore="UnusedResources" name="prem_setting_upgrade">Upgrade to Premium</string>
+	<string name="prem_setting_upgrade">Upgrade to Premium</string>
 	<string name="prem_setting_restore">Restore Existing Subscription</string>
 	
 	<string name="purchase_error_offline_t">Looks like you\'re offline</string>

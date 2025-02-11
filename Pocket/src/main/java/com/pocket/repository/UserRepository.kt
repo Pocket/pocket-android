@@ -52,4 +52,4 @@ fun LoginInfo.hasPremiumDisplaySettings(): Boolean {
     return hasPremium()
 }
 fun LoginInfo.isFree() = !hasPremium()
-fun LoginInfo.isPremiumUpgradeAvailable() = isLoggedIn() && isFree() && false // temporarily disable premium upgrades
+fun LoginInfo.isPremiumUpgradeAvailable() = isLoggedIn() && isFree()
