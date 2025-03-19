@@ -122,15 +122,12 @@
 	<string name="lb_prem_purchase_reader_title">Aangepaste leeservaring</string>
 	<string name="lb_prem_purchase_reader_desc">Houd je van ronde lettertypen, een bredere regelafstand of versmalde tekst? Stem Pocket op je leesstijl af.</string>
 	<string name="lb_prem_purchase_per_month" comment="per month subscription label on subscription button">%1$s/maand</string>
-	<string name="lb_prem_purchase_per_year" comment="per year subscription label on subscription button">%1$s/jaar</string>
 	<string name="lb_prem_purchase_complete_title">Hoera!</string>
 	<string name="lb_prem_purchase_complete_message">Je bent officieel lid van Pocket Premium. Welkom bij de nieuwe advertentievrije, aanpasbare, permanente versie van Pocket. We denken dat het je wel zal bevallen.</string>
 	<string name="lb_prem_purchase_complete_renew_title">Welkom terug!</string>
 	<string name="lb_prem_purchase_complete_renew_message">We hebben je abonnement verlengd en je bent weer officieel lid van Pocket Premium. We hopen dat deze advertentievrije, aanpasbare, permanente versie van Pocket je bevalt.</string>
 	<string name="lb_prem_purchase_complete_button">Terug naar Pocket</string>
 	<string name="lb_prem_purchase_terms">Abonnementen worden iedere periode automatisch verlengd, totdat ze worden opgezegd in Google Play.</string>
-
-	<string name="lb_save_25p_2_line" comment="keep as short as possible">Bespaar\n25%</string>
 	
 	<string name="lb_annotations_upsell_t">Meer markeringen nodig?</string>
 	<string name="lb_annotations_upsell_m">Je kunt momenteel maximaal %1$d markeringen per artikel maken. Ontvang onbeperkte markeringen (en meer) door vandaag nog te upgraden naar Pocket Premium.</string>
@@ -445,7 +442,6 @@
 	<string name="prem_setting_status">Abonnementsstatus</string>
 	<string name="prem_setting_subscription">Abonnement</string>
 	<string name="prem_setting_subscription_monthly">Maandelijks</string>
-	<string name="prem_setting_subscription_annual" comment="occurring once per year">Jaarlijks</string>
 	<string name="prem_setting_date_purchased">Aankoopdatum:</string>
 	<string name="prem_setting_renewal_date">Vervaldag</string>
 	<string name="prem_setting_renew_subscription">Verleng abonnement</string>
@@ -558,7 +554,6 @@
 	<string name="my_list_filter_all">Alle</string>
 	<string name="my_list_filter_tagged">Getagd</string>
 	<string name="my_list_filter_favorites">Favorieten</string>
-	<string name="my_list_filter_notes">Aantekening</string>
 	<string name="my_list_filter_filter">Filteren</string>
 	<string name="my_list_filter_edit">Bewerken</string>
 	<string name="edit_tags">Tags bewerken</string>
@@ -579,9 +574,6 @@
 	<string name="empty_list_archive_title">Houd je lijst up-to-date en geordend</string>
 	<string name="empty_list_archive_message">Archiveer opgeslagen artikelen die je al hebt gelezen via het archief-pictogram.</string>
 	<string name="empty_list_archive_action">Artikelen archiveren</string>
-	<string name="empty_list_notes_title">Vind hier je aantekeningen.</string>
-	<string name="empty_list_notes_message">Tik op het pluspictogram hierboven of de knop hieronder om een aantekening toe te voegen.</string>
-	<string name="empty_list_notes_action">Aantekening maken</string>
 	
 	<string name="time_to_read_filter_short">Kort</string>
 	<string name="time_to_read_filter_short_description">Minder dan 10 minuten</string>
@@ -610,19 +602,8 @@
 	<string name="highlights">Markeringen</string>
 	<string name="end_of_article_title">Misschien vind je dit ook leuk</string>
 	<string name="previous_and_next_setting_description">Wissel snel tussen artikelen met de knoppen \'Volgende\' en \'Vorige\'</string>
-
-	<string name="add_url_title">URL toevoegen</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">bijv. https://getpocket.com</string>
 	<string name="add_url_error">Voer een geldige URL in</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">Aantekening (optioneel)</string>
-	<string name="add_note_title">Notitie toevoegen</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">Titel (optioneel)</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">Aantekening</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">Notitie bewerken</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">Notitie verwijderen</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">Weet je zeker dat je dit item wilt verwijderen? Dit kan niet ongedaan gemaakt worden.</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"Door verder te gaan, ga je akkoord met:  \nde [Servicevoorwaarden](https://getpocket.com/tos) en [Privacyverklaring](https://getpocket.com/privacy) van Pocket."</string>
 </resources>
