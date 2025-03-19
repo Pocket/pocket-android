@@ -118,15 +118,12 @@
 	<string name="lb_prem_purchase_reader_title">読みやすさをカスタマイズ</string>
 	<string name="lb_prem_purchase_reader_desc">丸みを帯びたフォントや文字間隔の広いまたは狭いスタイルがお好きですか？Pocket をカスタマイズして、お好みの閲覧スタイルを作りましょう。</string>
 	<string name="lb_prem_purchase_per_month" comment="per month subscription label on subscription button">%1$s/月</string>
-	<string name="lb_prem_purchase_per_year" comment="per year subscription label on subscription button">%1$s/年</string>
 	<string name="lb_prem_purchase_complete_title">やった～！</string>
 	<string name="lb_prem_purchase_complete_message">正式に Pocket Premium メンバーになりました。広告なし、カスタマイズ可能な、永久版のPocketにようこそ。きっと気に入っていただけるはず！思う存分お楽しみください。</string>
 	<string name="lb_prem_purchase_complete_renew_title">おかえりなさい！</string>
 	<string name="lb_prem_purchase_complete_renew_message">契約の更新により、再び正式な Pocket Premium メンバーになりました。広告なし、カスタマイズ可能な、永久版の Pocket をどうぞお楽しみください。</string>
 	<string name="lb_prem_purchase_complete_button">Pocket に戻る</string>
 	<string name="lb_prem_purchase_terms">契約は Google Play でキャンセルされるまで、契約期間ごとに自動更新されます。</string>
-
-	<string name="lb_save_25p_2_line" comment="keep as short as possible">25%\n割引</string>
 	
 	<string name="lb_annotations_upsell_t">もっとハイライトしたいですか？</string>
 	<string name="lb_annotations_upsell_m">現時点では、記事1件につき%1$d回までのハイライトが可能です。今すぐPocket Premium にアップグレードして、ハイライトの制限を取り払いましょう（他にも機能が盛りだくさん）。</string>
@@ -436,7 +433,6 @@
 	<string name="prem_setting_status">購読状況</string>
 	<string name="prem_setting_subscription">購読</string>
 	<string name="prem_setting_subscription_monthly">月次</string>
-	<string name="prem_setting_subscription_annual" comment="occurring once per year">年次</string>
 	<string name="prem_setting_date_purchased">購入日</string>
 	<string name="prem_setting_renewal_date">更新日</string>
 	<string name="prem_setting_renew_subscription">購読を更新</string>
@@ -549,7 +545,6 @@
 	<string name="my_list_filter_all">すべて</string>
 	<string name="my_list_filter_tagged">タグ付けしました</string>
 	<string name="my_list_filter_favorites">お気に入り</string>
-	<string name="my_list_filter_notes">メモ</string>
 	<string name="my_list_filter_filter">フィルタ</string>
 	<string name="my_list_filter_edit">編集</string>
 	<string name="edit_tags">タグを編集</string>
@@ -570,9 +565,6 @@
 	<string name="empty_list_archive_title">リストを最新に保ちながら整理</string>
 	<string name="empty_list_archive_message">アーカイブアイコンを使用すると、読み終えた保存コンテンツをアーカイブできます。</string>
 	<string name="empty_list_archive_action">アーカイブする方法</string>
-	<string name="empty_list_notes_title">メモはここに表示されます</string>
-	<string name="empty_list_notes_message">上のプラスアイコンまたは下のボタンをタップしてメモを追加します。</string>
-	<string name="empty_list_notes_action">メモを作成</string>
 	
 	<string name="time_to_read_filter_short">短い記事</string>
 	<string name="time_to_read_filter_short_description">10 分未満</string>
@@ -601,19 +593,8 @@
 	<string name="highlights">ハイライト</string>
 	<string name="end_of_article_title">こちらもおすすめ</string>
 	<string name="previous_and_next_setting_description">［次へ］ボタンと［前へ］ボタンで記事間をすばやく移動</string>
-
-	<string name="add_url_title">URLを追加</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">例：https://getpocket.com</string>
 	<string name="add_url_error">有効な URL を入力してください。</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">メモ（オプション）</string>
-	<string name="add_note_title">メモを追加</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">タイトル（任意）</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">メモ</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">メモを編集</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">メモを削除</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">このアイテムを削除してよろしいですか？この操作は取り消せません。</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"続行することにより、次に同意したことになります:  \nPocket [利用規約](https://getpocket.com/tos) および [プライバシーに関する通知](https://getpocket.com/privacy)"</string>
 </resources>
