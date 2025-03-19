@@ -130,15 +130,12 @@
 	<string name="lb_prem_purchase_reader_title">Собственный режим чтения</string>
 	<string name="lb_prem_purchase_reader_desc">Вам нравятся округлые шрифты, более широкие интервалы или сжатый текст? Настройте Pocket по своему читательскому вкусу.</string>
 	<string name="lb_prem_purchase_per_month" comment="per month subscription label on subscription button">%1$s в месяц</string>
-	<string name="lb_prem_purchase_per_year" comment="per year subscription label on subscription button">%1$s в год</string>
 	<string name="lb_prem_purchase_complete_title">Поздравляем!</string>
 	<string name="lb_prem_purchase_complete_message">Теперь вы официально стали пользователем Pocket Premium. Добро пожаловать в новую настраиваемую и постоянную версию вашего Pocket без рекламы. Мы надеемся, что вам понравится.</string>
 	<string name="lb_prem_purchase_complete_renew_title">Добро пожаловать обратно!</string>
 	<string name="lb_prem_purchase_complete_renew_message">Мы продлили вашу подписку, и вы снова официально являетесь участником Pocket Premium. Мы надеемся, вам понравится эта настраиваемая и постоянная версия вашего Pocket без рекламы.</string>
 	<string name="lb_prem_purchase_complete_button">Назад к Pocket</string>
 	<string name="lb_prem_purchase_terms">Подписки будут автоматически продлены по окончании очередного расчетного периода, пока вы ее не отмените в Google Play.</string>
-
-	<string name="lb_save_25p_2_line" comment="keep as short as possible">Скидка\n25%</string>
 	
 	<string name="lb_annotations_upsell_t">Нужно больше пометок?</string>
 	<string name="lb_annotations_upsell_m">Ваш аккаунт ограничен %1$d пометками на каждую статью. Приобретите Pocket Premium и получите неограниченное количество пометок (и многое другое).</string>
@@ -463,7 +460,6 @@
 	<string name="prem_setting_status">Статус подписки</string>
 	<string name="prem_setting_subscription">Подписка</string>
 	<string name="prem_setting_subscription_monthly">Ежемесячно</string>
-	<string name="prem_setting_subscription_annual" comment="occurring once per year">Годовой</string>
 	<string name="prem_setting_date_purchased">Дата покупки</string>
 	<string name="prem_setting_renewal_date">Дата обновления</string>
 	<string name="prem_setting_renew_subscription">Продлить подписку</string>
@@ -576,7 +572,6 @@
 	<string name="my_list_filter_all">Все</string>
 	<string name="my_list_filter_tagged">Обозначено тегом</string>
 	<string name="my_list_filter_favorites">Избранное</string>
-	<string name="my_list_filter_notes">Примечания</string>
 	<string name="my_list_filter_filter">Фильтр</string>
 	<string name="my_list_filter_edit">Редактировать</string>
 	<string name="edit_tags">Редактировать теги</string>
@@ -597,9 +592,6 @@
 	<string name="empty_list_archive_title">Храните свой список свежим и упорядоченным</string>
 	<string name="empty_list_archive_message">Архивируйте сохраненные материалы с помощью значка архива.</string>
 	<string name="empty_list_archive_action">Как архивировать</string>
-	<string name="empty_list_notes_title">Здесь могут храниться ваши заметки</string>
-	<string name="empty_list_notes_message">Для добавления заметки нажмите на символ плюса выше или нажмите кнопку ниже.</string>
-	<string name="empty_list_notes_action">Создать заметку</string>
 	
 	<string name="time_to_read_filter_short">Короткие</string>
 	<string name="time_to_read_filter_short_description">Менее 10 мин</string>
@@ -628,19 +620,8 @@
 	<string name="highlights">Выделение</string>
 	<string name="end_of_article_title">Вам также может понравиться</string>
 	<string name="previous_and_next_setting_description">Быстрое перемещение между статьями с помощью кнопок «Далее» и «Назад»</string>
-
-	<string name="add_url_title">Добавить URL</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">например https://getpocket.com</string>
 	<string name="add_url_error">Введите правильный URL</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">Примечание (необязательно)</string>
-	<string name="add_note_title">Добавить примечание</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">Заголовок (необязательно)</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">Примечание</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">Редактировать примечание</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">Удалить примечание</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">Вы действительно хотите удалить этот материал? Это действие нельзя отменить.</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"Продолжая, вы соглашаетесь с:  \n[Условиями использования](https://getpocket.com/tos) и [Уведомлением о конфиденциальности](https://getpocket.com/privacy) Pocket"</string>
 </resources>
