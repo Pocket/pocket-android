@@ -122,15 +122,12 @@
 	<string name="lb_prem_purchase_reader_title">Personalizar a experiência de leitura</string>
 	<string name="lb_prem_purchase_reader_desc">Você prefere fontes mais arredondadas, um espaçamento mais amplo ou texto condensado? Ajuste o Pocket de acordo com o seu estilo de leitura.</string>
 	<string name="lb_prem_purchase_per_month" comment="per month subscription label on subscription button">%1$s/mês</string>
-	<string name="lb_prem_purchase_per_year" comment="per year subscription label on subscription button">%1$s/ano</string>
 	<string name="lb_prem_purchase_complete_title">Parabéns!</string>
 	<string name="lb_prem_purchase_complete_message">Agora você é um membro oficial do Pocket Premium. Bem-vindo à nova versão permanente, personalizável e sem anúncios de seu Pocket. Certamente você vai gostar.</string>
 	<string name="lb_prem_purchase_complete_renew_title">Bem-vindo de volta!</string>
 	<string name="lb_prem_purchase_complete_renew_message">Renovamos a sua assinatura. Você voltou a ser oficialmente um membro do Pocket Premium. Esperamos que você goste da versão permanente, personalizável e sem anúncios de seu Pocket.</string>
 	<string name="lb_prem_purchase_complete_button">Voltar ao Pocket</string>
 	<string name="lb_prem_purchase_terms">A assinatura é renovada automaticamente até ser cancelada no Google Play.</string>
-
-	<string name="lb_save_25p_2_line" comment="keep as short as possible">Economize\n25%</string>
 	
 	<string name="lb_annotations_upsell_t">Precisa de mais destaques?</string>
 	<string name="lb_annotations_upsell_m">Seu limite atual é de %1$d destaques por artigo. Faça um upgrade hoje mesmo para uma conta Pocket Premium e aproveite destaques ilimitados (e muito mais).</string>
@@ -445,7 +442,6 @@
 	<string name="prem_setting_status">Status da assinatura</string>
 	<string name="prem_setting_subscription">Assinatura</string>
 	<string name="prem_setting_subscription_monthly">Mensal</string>
-	<string name="prem_setting_subscription_annual" comment="occurring once per year">Anual</string>
 	<string name="prem_setting_date_purchased">Data da Compra</string>
 	<string name="prem_setting_renewal_date">Data da Renovação</string>
 	<string name="prem_setting_renew_subscription">Renovar assinatura</string>
@@ -558,7 +554,6 @@
 	<string name="my_list_filter_all">Todos</string>
 	<string name="my_list_filter_tagged">Com tag </string>
 	<string name="my_list_filter_favorites">Favoritos</string>
-	<string name="my_list_filter_notes">Observações</string>
 	<string name="my_list_filter_filter">Filtrar</string>
 	<string name="my_list_filter_edit">Editar</string>
 	<string name="edit_tags">Editar tags</string>
@@ -579,9 +574,6 @@
 	<string name="empty_list_archive_title">Mantenha sua lista atualizada e organizada</string>
 	<string name="empty_list_archive_message">Use o ícone de arquivar para guardar os itens salvos que você não precisa mais acessar.</string>
 	<string name="empty_list_archive_action">Como arquivar</string>
-	<string name="empty_list_notes_title">Encontre suas anotações aqui</string>
-	<string name="empty_list_notes_message">Toque no ícone de mais acima ou no botão abaixo para adicionar uma nota.</string>
-	<string name="empty_list_notes_action">Criar anotação</string>
 	
 	<string name="time_to_read_filter_short">Curto</string>
 	<string name="time_to_read_filter_short_description">Menos de 10 minutos</string>
@@ -610,19 +602,8 @@
 	<string name="highlights">Destaques</string>
 	<string name="end_of_article_title">Você também pode gostar</string>
 	<string name="previous_and_next_setting_description">Use os botões \"Seguinte\" e \"Anterior\" para passar rapidamente de um artigo para outro</string>
-
-	<string name="add_url_title">Adicionar URL</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">por exemplo,https://getpocket.com</string>
 	<string name="add_url_error">Digite um URL válido</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">Nota (opcional)</string>
-	<string name="add_note_title">Adicionar anotação</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">Título (opcional)</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">Observação</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">Editar anotação</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">Excluir anotação</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">Tem certeza de que deseja excluir este item? Essa ação é irreversível.</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"Ao continuar, você concorda com:  \nos [Termos de Serviço](https://getpocket.com/tos) e com o [Aviso de Privacidade](https://getpocket.com/privacy) do Pocket"</string>
 </resources>
