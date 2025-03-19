@@ -118,15 +118,12 @@
 	<string name="lb_prem_purchase_reader_title">自定义阅读体验</string>
 	<string name="lb_prem_purchase_reader_desc">喜欢更圆的字体、更宽的字距，或是紧密的字样？定制 Pocket 以适合您的阅读风格。</string>
 	<string name="lb_prem_purchase_per_month" comment="per month subscription label on subscription button">%1$s/月</string>
-	<string name="lb_prem_purchase_per_year" comment="per year subscription label on subscription button">%1$s/年</string>
 	<string name="lb_prem_purchase_complete_title">好消息！</string>
 	<string name="lb_prem_purchase_complete_message">您现在已正式成为 Pocket Premium 会员。欢迎使用全新无广告、可自定义的永久版本 Pocket。您会喜欢上 Pocket 的。</string>
 	<string name="lb_prem_purchase_complete_renew_title">欢迎回来！</string>
 	<string name="lb_prem_purchase_complete_renew_message">我们已续订您的订购，您再次正式成为 Pocket Premium 会员。我们希望您喜欢这款无广告、可自定义的永久版本 Pocket。</string>
 	<string name="lb_prem_purchase_complete_button">返回 Pocket</string>
 	<string name="lb_prem_purchase_terms">订阅将在每个期限自动续订，直至在 Google Play 中取消为止。</string>
-
-	<string name="lb_save_25p_2_line" comment="keep as short as possible">节省\n25%</string>
 	
 	<string name="lb_annotations_upsell_t">需要更多标记？</string>
 	<string name="lb_annotations_upsell_m">目前，您在每篇文章中仅限 %1$d 处标记。立即升级至 Pocket Premium，即可无限标记，还有更多功能。</string>
@@ -436,7 +433,6 @@
 	<string name="prem_setting_status">订购状态</string>
 	<string name="prem_setting_subscription">订购</string>
 	<string name="prem_setting_subscription_monthly">每月</string>
-	<string name="prem_setting_subscription_annual" comment="occurring once per year">年度</string>
 	<string name="prem_setting_date_purchased">购买日期</string>
 	<string name="prem_setting_renewal_date">续订日期</string>
 	<string name="prem_setting_renew_subscription">续订订购</string>
@@ -549,7 +545,6 @@
 	<string name="my_list_filter_all">全部</string>
 	<string name="my_list_filter_tagged">已标记</string>
 	<string name="my_list_filter_favorites">收藏夹</string>
-	<string name="my_list_filter_notes">备注</string>
 	<string name="my_list_filter_filter">过滤</string>
 	<string name="my_list_filter_edit">编辑</string>
 	<string name="edit_tags">编辑标签</string>
@@ -570,9 +565,6 @@
 	<string name="empty_list_archive_title">保持您的列表清新整齐</string>
 	<string name="empty_list_archive_message">使用存档图标将您完成的已保存内容存档。</string>
 	<string name="empty_list_archive_action">如何存档</string>
-	<string name="empty_list_notes_title">在此查找您的备注</string>
-	<string name="empty_list_notes_message">点击上方的加号图标或下方的按钮来添加备注。</string>
-	<string name="empty_list_notes_action">创建备注</string>
 	
 	<string name="time_to_read_filter_short">简短</string>
 	<string name="time_to_read_filter_short_description">少于 10 分钟</string>
@@ -601,19 +593,8 @@
 	<string name="highlights">精彩集锦</string>
 	<string name="end_of_article_title">您可能还喜欢</string>
 	<string name="previous_and_next_setting_description">使用“下一个”和“上一个”按钮在文本之间快速移动</string>
-
-	<string name="add_url_title">添加 URL</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">例如 https://getpocket.com</string>
 	<string name="add_url_error">请输入有效的 URL</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">备注（可选）</string>
-	<string name="add_note_title">添加备注</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">标题（可选）</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">备注</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">编辑备注</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">删除备注</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">确定要删除此项目吗？删除后无法恢复。</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"继续使用即表示您同意：  \nPocket [服务条款](https://getpocket.com/tos) 和[隐私声明](https://getpocket.com/privacy)"</string>
 </resources>
