@@ -122,15 +122,12 @@
 	<string name="lb_prem_purchase_reader_title">Expérience de lecture personnalisée</string>
 	<string name="lb_prem_purchase_reader_desc">Vous préférez des polices plus rondes, un espacement plus grand ou un texte condensé? Personnalisez Pocket pour l\'adapter à votre style de lecture.</string>
 	<string name="lb_prem_purchase_per_month" comment="per month subscription label on subscription button">%1$s/mois</string>
-	<string name="lb_prem_purchase_per_year" comment="per year subscription label on subscription button">%1$s/année</string>
 	<string name="lb_prem_purchase_complete_title">Hourra!</string>
 	<string name="lb_prem_purchase_complete_message">Vous êtes officiellement un membre Pocket Premium. Bienvenue dans la nouvelle version sans publicité, personnalisable et permanente de votre Pocket. Nous pensons que vous vous plairez, ici.</string>
 	<string name="lb_prem_purchase_complete_renew_title">Bon retour parmi nous!</string>
 	<string name="lb_prem_purchase_complete_renew_message">Nous avons renouvelé votre abonnement, vous êtes officiellement un membre de Pocket Premium encore une fois. Nous espérons que vous apprécierez la nouvelle version sans publicité, personnalisable et permanente de votre Pocket.</string>
 	<string name="lb_prem_purchase_complete_button">Retour à Pocket</string>
 	<string name="lb_prem_purchase_terms">Les abonnements seront automatiquement renouvelés chaque période à moins d\'une annulation dans Google Play.</string>
-
-	<string name="lb_save_25p_2_line" comment="keep as short as possible">Économisez\n25 %</string>
 	
 	<string name="lb_annotations_upsell_t">Besoin de davantage de passages surlignés?</string>
 	<string name="lb_annotations_upsell_m">Vous êtes présentement limité à %1$d passages surlignés par article. Obtenez les passages surlignés illimités (et plus) en passant à Pocket Premium aujourd\'hui.</string>
@@ -445,7 +442,6 @@
 	<string name="prem_setting_status">État de l\'abonnement</string>
 	<string name="prem_setting_subscription">Abonnement</string>
 	<string name="prem_setting_subscription_monthly">Par mois</string>
-	<string name="prem_setting_subscription_annual" comment="occurring once per year">Annuel</string>
 	<string name="prem_setting_date_purchased">Date d\'achat</string>
 	<string name="prem_setting_renewal_date">Date de renouvellement</string>
 	<string name="prem_setting_renew_subscription">Renouveler l\'abonnement</string>
@@ -558,7 +554,6 @@
 	<string name="my_list_filter_all">Tous</string>
 	<string name="my_list_filter_tagged">Balisé</string>
 	<string name="my_list_filter_favorites">Favoris</string>
-	<string name="my_list_filter_notes">Notes</string>
 	<string name="my_list_filter_filter">Filtrer</string>
 	<string name="my_list_filter_edit">Modifier</string>
 	<string name="edit_tags">Modifier les balises</string>
@@ -579,9 +574,6 @@
 	<string name="empty_list_archive_title">Gardez votre liste actuelle et épurée</string>
 	<string name="empty_list_archive_message">Archivez les pages sauvegardées dont vous n,avez plus besoin à l\'aide de l\'icône Archive.</string>
 	<string name="empty_list_archive_action">Comment archiver des pages sauvegardées</string>
-	<string name="empty_list_notes_title">Trouvez vos notes ici</string>
-	<string name="empty_list_notes_message">Touchez l\'icône plus ci-dessus ou le bouton ci-dessous pour ajouter une note.</string>
-	<string name="empty_list_notes_action">Créer une note</string>
 	
 	<string name="time_to_read_filter_short">Court</string>
 	<string name="time_to_read_filter_short_description">Moins de 10 min</string>
@@ -610,19 +602,8 @@
 	<string name="highlights">Surligneur</string>
 	<string name="end_of_article_title">Vous pourriez également aimer</string>
 	<string name="previous_and_next_setting_description">Passez rapidement d\'un article à l\'autre grâce aux boutons « Suivant » et « Précédent »</string>
-
-	<string name="add_url_title">Ajouter une URL</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">p. ex. https://getpocket.com</string>
 	<string name="add_url_error">Veuillez entrer une adresse URL valide</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">Note (facultatif)</string>
-	<string name="add_note_title">Ajouter une note</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">Titre (facultatif)</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">Note</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">Modifier la note</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">Supprimer la note</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">Êtes-vous certain de vouloir supprimer cet élément? Vous ne pourrez pas revenir en arrière.</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"En poursuivant, vous acceptez les  \n[Conditions de service](https://getpocket.com/tos) et l'[Avis de confidentialité](https://getpocket.com/privacy) de Pocket."</string>
 </resources>
