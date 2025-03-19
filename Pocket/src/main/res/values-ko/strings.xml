@@ -118,15 +118,12 @@
 	<string name="lb_prem_purchase_reader_title">읽기 환경 맞춤화</string>
 	<string name="lb_prem_purchase_reader_desc">둥근 글꼴, 넓은 자간, 폭이 좁은 텍스트... 어떤 스타일을 원하시나요? 원하는 읽기 스타일로 Pocket을 맞춤 설정해 보십시오.</string>
 	<string name="lb_prem_purchase_per_month" comment="per month subscription label on subscription button">%1$s/월</string>
-	<string name="lb_prem_purchase_per_year" comment="per year subscription label on subscription button">%1$s/년</string>
 	<string name="lb_prem_purchase_complete_title">환영합니다!</string>
 	<string name="lb_prem_purchase_complete_message">공식적으로 Pocket Premium 회원이 되셨습니다. 광고가 없는 새로운 맞춤형, 영구 Pocket 버전에 오신 것을 환영합니다. 마음에 드실 것입니다.</string>
 	<string name="lb_prem_purchase_complete_renew_title">다시 오신 것을 환영합니다!</string>
 	<string name="lb_prem_purchase_complete_renew_message">가입 상태가 갱신되어 다시 공식적으로 Pocket Premium 회원이 되셨습니다. 광고가 없는 이 맞춤형, 영구 Pocket 버전을 잘 활용해 보시기 바랍니다.</string>
 	<string name="lb_prem_purchase_complete_button">Pocket으로 돌아가기</string>
 	<string name="lb_prem_purchase_terms">Google Play에서 취소할 때까지는 구독이 기간마다 자동으로 갱신됩니다.</string>
-
-	<string name="lb_save_25p_2_line" comment="keep as short as possible">25%\n절약</string>
 	
 	<string name="lb_annotations_upsell_t">더 많은 하이라이트를 원하시나요?</string>
 	<string name="lb_annotations_upsell_m">귀하는 현재 아티클당 하이라이트 %1$d개로 제한되어 있습니다. 지금 Pocket 프리미엄으로 업그레이드하여 무제한 하이라이트와 추가 기능을 이용하십시오.</string>
@@ -436,7 +433,6 @@
 	<string name="prem_setting_status">구독 상태</string>
 	<string name="prem_setting_subscription">구독</string>
 	<string name="prem_setting_subscription_monthly">월간</string>
-	<string name="prem_setting_subscription_annual" comment="occurring once per year">연간</string>
 	<string name="prem_setting_date_purchased">구매 날짜</string>
 	<string name="prem_setting_renewal_date">갱신 날짜</string>
 	<string name="prem_setting_renew_subscription">구독 갱신</string>
@@ -549,7 +545,6 @@
 	<string name="my_list_filter_all">전체</string>
 	<string name="my_list_filter_tagged">태그 지정됨</string>
 	<string name="my_list_filter_favorites">즐겨찾기</string>
-	<string name="my_list_filter_notes">메모</string>
 	<string name="my_list_filter_filter">필터</string>
 	<string name="my_list_filter_edit">편집</string>
 	<string name="edit_tags">태그 편집</string>
@@ -570,9 +565,6 @@
 	<string name="empty_list_archive_title">목록을 깔끔하게 정리해 보세요</string>
 	<string name="empty_list_archive_message">보관 아이콘을 사용하여 작업이 완료된 저장 항목을 보관해 보세요.</string>
 	<string name="empty_list_archive_action">보관 방법</string>
-	<string name="empty_list_notes_title">여기에서 메모를 확인해 보세요</string>
-	<string name="empty_list_notes_message">메모를 추가하려면 위의 더하기 아이콘이나 아래의 버튼을 누르세요.</string>
-	<string name="empty_list_notes_action">메모 생성</string>
 	
 	<string name="time_to_read_filter_short">짧게</string>
 	<string name="time_to_read_filter_short_description">10분 미만</string>
@@ -601,19 +593,8 @@
 	<string name="highlights">하이라이트</string>
 	<string name="end_of_article_title">추천 콘텐츠</string>
 	<string name="previous_and_next_setting_description">\'다음\' 및 \'이전\' 버튼을 사용하여 아티클 간에 빠르게 이동할 수 있습니다</string>
-
-	<string name="add_url_title">URL 추가</string>
 	<string name="add_url_hint" comment="Hint for an input field where you can paste a URL to save (add to your saves)">예 https://getpocket.com</string>
 	<string name="add_url_error">유효한 URL을 입력하십시오</string>
-	<!-- All the remaining pieces of notes copy, for Smartling to translate in a single job. -->
-	<!-- TODO(notes): remove unused ignores -->
-	<string tools:ignore="UnusedResources" name="add_url_note_hint" comment="Hint for an input field where you can optionally add a note when add a URL to your saves">메모(선택 사항)</string>
-	<string name="add_note_title">메모 추가</string>
-	<string tools:ignore="UnusedResources" name="add_note_title_hint" comment="Hint for an input field to optionally add a title for a note you&apos;re creating">제목(선택 사항)</string>
-	<string tools:ignore="UnusedResources" name="add_note_hint" comment="Hind for an input field where you put the body/content of a note you&apos;re creating">메모</string>
-	<string tools:ignore="UnusedResources" name="edit_note_title">메모 편집</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_title">메모 삭제</string>
-	<string tools:ignore="UnusedResources" name="delete_note_prompt_message">이 항목을 삭제하시겠습니까? 이 작업 실행을 취소할 수 없습니다.</string>
 
 	<string name="authentication_legal_disclaimer" comment="This string uses Markdown formatting. Please preserve the formatting (including TWO spaces before the new line).">"계속 진행하면  \nPocket [서비스 약관](https://getpocket.com/tos) 및 [개인정보 보호정책](https://getpocket.com/privacy)에 동의하는 것으로 간주됩니다"</string>
 </resources>
