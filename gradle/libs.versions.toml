@@ -38,7 +38,7 @@ androidx-paging-compose = { module = "androidx.paging:paging-compose", version.r
 androidx-work = { module = "androidx.work:work-runtime", version = "2.10.1" }
 appcenter-distribute = { module = "com.microsoft.appcenter:appcenter-distribute", version.ref = "appcenter" }
 appcenter-distribute-play = { module = "com.microsoft.appcenter:appcenter-distribute-play", version.ref = "appcenter" }
-braze = { module = "com.braze:android-sdk-ui", version = "33.1.0" }
+braze = { module = "com.braze:android-sdk-ui", version = "36.0.0" }
 dagger-hilt = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
 dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version = "33.13.0" }
