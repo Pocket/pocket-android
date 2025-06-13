@@ -14,7 +14,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api(libs.okio)
-                implementation("com.apollographql.apollo3:apollo-ast:3.8.5")
+                implementation("com.apollographql.apollo3:apollo-ast:3.8.6")
             }
         }
         val commonTest by getting {
