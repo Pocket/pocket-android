@@ -69,7 +69,7 @@ plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serializat
 plugin-licensee = { module = "app.cash.licensee:licensee-gradle-plugin", version = "1.13.0" }
 plugin-sentry = { module = "io.sentry:sentry-android-gradle-plugin", version = "5.7.0" }
 plugin-versions = { module = "com.github.ben-manes:gradle-versions-plugin", version = "0.52.0" }
-robolectric = { module = "org.robolectric:robolectric", version = "4.15" }
+robolectric = { module = "org.robolectric:robolectric", version = "4.15.1" }
 sentry = { module = "io.sentry:sentry-android" }
 sentry-bom = { module = "io.sentry:sentry-bom", version = "8.14.0" }
 sentry-okhttp = { module = "io.sentry:sentry-okhttp" }
