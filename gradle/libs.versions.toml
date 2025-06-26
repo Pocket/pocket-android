@@ -41,7 +41,7 @@ appcenter-distribute-play = { module = "com.microsoft.appcenter:appcenter-distri
 braze = { module = "com.braze:android-sdk-ui", version = "33.1.0" }
 dagger-hilt = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
 dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
-firebase-bom = { module = "com.google.firebase:firebase-bom", version = "33.15.0" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version = "33.16.0" }
 firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
 google-play-billing = { module = "com.android.billingclient:billing-ktx", version = "7.1.1" }
 kotlin-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit" }
