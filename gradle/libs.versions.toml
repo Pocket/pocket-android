@@ -35,7 +35,7 @@ androidx-media = { module = "androidx.media:media", version = "1.7.0" }
 androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidx-navigation" }
 androidx-paging = { module = "androidx.paging:paging-runtime", version.ref = "androidx-paging" }
 androidx-paging-compose = { module = "androidx.paging:paging-compose", version.ref = "androidx-paging" }
-androidx-work = { module = "androidx.work:work-runtime", version = "2.10.2" }
+androidx-work = { module = "androidx.work:work-runtime", version = "2.10.3" }
 appcenter-distribute = { module = "com.microsoft.appcenter:appcenter-distribute", version.ref = "appcenter" }
 appcenter-distribute-play = { module = "com.microsoft.appcenter:appcenter-distribute-play", version.ref = "appcenter" }
 braze = { module = "com.braze:android-sdk-ui", version = "33.1.0" }
