@@ -43,7 +43,7 @@ dagger-hilt = { module = "com.google.dagger:hilt-android", version.ref = "dagger
 dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version = "33.16.0" }
 firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
-google-play-billing = { module = "com.android.billingclient:billing-ktx", version = "7.1.1" }
+google-play-billing = { module = "com.android.billingclient:billing-ktx", version = "8.0.0" }
 kotlin-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test-common" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android" }
