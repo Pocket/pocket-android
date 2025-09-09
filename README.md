@@ -1,3 +1,11 @@
+# ⚠️ Notice: Pocket Has Been Shut Down
+
+As of July 8, 2025, Pocket has been shut down and is no longer under active development.
+
+This repository is preserved for historical reference only and will not receive further updates, bug fixes, or security patches.
+
+For more details, see [Mozilla’s announcement](https://support.mozilla.org/en-US/kb/future-of-pocket).
+
 # Pocket Android
 
 ### Modules
